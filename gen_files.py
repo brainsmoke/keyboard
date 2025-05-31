@@ -1,6 +1,14 @@
 u=19.05
 schema_u = 20.32
+diode_offset = (3, -3)
+switch_offset = (-2.54 , 5.08)
+board_offset = (25.4,25.4)
 
+import sys
+
+from kipy import KiCad
+from kipy.geometry import Vector2, Angle
+from kipy.board_types import BoardLayer
 
 from layout import get_layout
 from schematic import Schematic, Switch, Diode, Wire, Junction, HierarchicalLabel, add_pos, sub_pos
@@ -14,7 +22,7 @@ def designator(base):
 
 def footprint(key):
     x, y, w, h = key['box']
-    return f"SW_Cherry_MX_{float(w):#.2f}_PCB"
+    return f"Button_Switch_Keyboard:SW_Cherry_MX_{float(w):#.2f}u_PCB"
 
 def row_label(key):
     c, r = key['matrix']
@@ -23,6 +31,12 @@ def row_label(key):
 def col_label(key):
     c, r = key['matrix']
     return "c"+str(c)
+
+def get_footprint_pos(key, u, offset=(0,0), board=(0,0)):
+    x, y, w, h = key['box']
+    dx, dy = offset
+    bdx, bdy = board
+    return Vector2.from_xy_mm(u*(x+w/2.)+dx+bdx, u*(y+h/2.)+dy+bdy)
 
 layout = get_layout()
 
@@ -44,7 +58,7 @@ for r_ix, row in enumerate(layout):
         key['switch'] = Switch(pos, designator("SW"), "key_"+key['key'], footprint(key))
         s.add(key['switch'])
         diode_pos = pos[0], pos[1]+2.54*3
-        key['diode'] = Diode(diode_pos, designator("D"), "", "Diode_SMD:D_SOD-123")
+        key['diode'] = Diode(diode_pos, designator("D"), "d_"+key['key'], "Diode_SMD:D_SOD-123")
         s.add(key['diode'])
 
 
@@ -92,5 +106,25 @@ for r_ix, row in enumerate(layout):
         s.add(Wire((anode_pos[0]+2.54, low_pos[1]), add_pos(anode_pos, (2.54, 0))))
 
 
+if sys.argv[1] == 'schematic':
+    print(s)
+elif sys.argv[1] == 'pcb':
+    keys_by_switch_value = { k['switch'].value() : k for row in layout for k in row }
+    keys_by_diode_value = { k['diode'].value() : k for row in layout for k in row }
+    kicad = KiCad()
+    board = kicad.get_board()
+    footprints = board.get_footprints()
+    for footprint in footprints:
+        value = footprint.value_field.text.value
+        if value in keys_by_switch_value:
+            key = keys_by_switch_value[value]
+            footprint.orientation = Angle.from_degrees(180)
+            footprint.position = get_footprint_pos(key, u=u, offset=switch_offset, board=board_offset)
+        elif value in keys_by_diode_value:
+            key = keys_by_diode_value[value]
+            footprint.position = get_footprint_pos(key, u=u, offset=diode_offset, board=board_offset)
+            footprint.orientation = Angle.from_degrees(90)
+    #        footprint.layer = BoardLayer.BL_B_Cu
 
-print(s)
+
+    board.update_items(footprints)

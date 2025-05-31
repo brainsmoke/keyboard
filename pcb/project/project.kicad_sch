@@ -6,8 +6,8 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 22.86 24.13)
-		(size 55.88 26.67)
+		(at 24.13 20.32)
+		(size 13.97 43.18)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -22,7 +22,7 @@
 		)
 		(uuid "60f6c3bc-58ef-403a-a4f1-b0d026be7b6d")
 		(property "Sheetname" "keys"
-			(at 22.86 23.4184 0)
+			(at 24.13 19.6084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31,12 +31,232 @@
 			)
 		)
 		(property "Sheetfile" "keys.kicad_sch"
-			(at 22.86 51.3846 0)
+			(at 24.13 64.0846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "c9" output
+			(at 24.13 45.72 180)
+			(uuid "1b4faf35-eec7-4420-aef8-a67b6e466ba5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c0" output
+			(at 24.13 22.86 180)
+			(uuid "865e290d-f991-4701-8bc8-0a90564663e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "r2" input
+			(at 38.1 27.94 0)
+			(uuid "4d5c9b79-1922-4854-958e-d6c09ddbaa38")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "r4" input
+			(at 38.1 33.02 0)
+			(uuid "b7184e31-9a5e-414b-b3e5-72c64039f145")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "c7" output
+			(at 24.13 40.64 180)
+			(uuid "aaa508ae-54d4-4bdb-8419-5e769b002bb1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c1" output
+			(at 24.13 25.4 180)
+			(uuid "9f689ed0-f5da-41d7-8cfd-7065b9771d8c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "r1" input
+			(at 38.1 25.4 0)
+			(uuid "668d539f-50d0-4a51-a15a-ded19e6b9325")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "c12" output
+			(at 24.13 53.34 180)
+			(uuid "e545d320-ba13-4919-936f-224fd00997c1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c5" output
+			(at 24.13 35.56 180)
+			(uuid "3ff30908-36ba-433a-b49a-582acdc5aeb4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c8" output
+			(at 24.13 43.18 180)
+			(uuid "488bf74b-b1ef-415c-b2ae-d8a38bda9762")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c2" output
+			(at 24.13 27.94 180)
+			(uuid "b184c951-0065-4574-914b-f39affb80201")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c10" output
+			(at 24.13 48.26 180)
+			(uuid "399d0b2b-b166-4a3e-900d-81e6bd0b4b53")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "r3" input
+			(at 38.1 30.48 0)
+			(uuid "d4bfc0cc-6c06-45bf-b598-69e5b29bcead")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "c3" output
+			(at 24.13 30.48 180)
+			(uuid "4654bec4-ee36-4576-9ff0-2deebc00075a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c14" output
+			(at 24.13 58.42 180)
+			(uuid "6d241522-b572-4553-8363-dedc1268355e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c6" output
+			(at 24.13 38.1 180)
+			(uuid "f8fb0e07-4745-4816-ae22-ec0018316fc1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c13" output
+			(at 24.13 55.88 180)
+			(uuid "9f67eb93-c66d-482e-9345-3feeceb8fc48")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "r5" input
+			(at 38.1 35.56 0)
+			(uuid "dcaedb44-8d89-4d5b-9163-97513167bf79")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "c11" output
+			(at 24.13 50.8 180)
+			(uuid "b1a900e0-3761-480b-9f84-664a3495f42b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "c4" output
+			(at 24.13 33.02 180)
+			(uuid "7024c941-d20a-4cba-b816-d9e9a58d3984")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "r0" input
+			(at 38.1 22.86 0)
+			(uuid "4bbb26d4-bbf7-4745-bbf7-06b587b12776")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "c15" output
+			(at 24.13 60.96 180)
+			(uuid "3c84e773-07dc-422e-8d33-cf55442aacb9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances

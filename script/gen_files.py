@@ -1,6 +1,6 @@
 u=19.05
 schema_u = u
-diode_offset = (5.5, -3)
+diode_offset = (4.3, -2.2)
 switch_offset = (-2.54 , 5.08)
 board_offset = (25.4,25.4)
 LED_offset = (0,-5.08)
@@ -11,8 +11,8 @@ from kipy import KiCad
 from kipy.geometry import Vector2, Angle
 from kipy.board_types import BoardLayer
 
-from layout import get_layout
-from schematic import Schematic, Switch, Diode, LED, Wire, Junction, HierarchicalLabel, Label, TLC5916, add_pos, sub_pos
+from layout import get_layout, get_led_mapping
+from schematic import Schematic, Switch, Diode, LED, Resistor, Capacitor, Wire, Junction, HierarchicalLabel, Label, TLC5916, add_pos, sub_pos
 
 _designators = {}
 def designator(base):
@@ -51,11 +51,13 @@ def get_configuration():
             key['matrix'] = (col, row)
 
     for row, r in [ [5, conf[-1]] ]:
-        for col, key in zip([0,1,2,5,7,8,9,10,11,12,13], r):
+        for col, key in zip([0,1,2,5,8,9,11,12,13,14,15], r):
             key['matrix'] = (col, row)
 
+    conf[4][11]['matrix'] = (12, 4)
+    conf[4][12]['matrix'] = (14, 4)
     conf[1][16]['matrix'] = (15, 3)
-    conf[2][16]['matrix'] = (14, 3)
+    conf[2][16]['matrix'] = (15, 4)
 
     x_start, y_start = 25.4, 25.4
     for r_ix, row in enumerate(conf):
@@ -69,8 +71,7 @@ def get_configuration():
 
     return conf
 
-def add_label(s, pos, name, label_type, pin_type, path):
-    dir = "right"
+def draw_wire(s, pos, path):
     for (p, x) in path:
         last_pos = pos
         pos = add_pos(pos, {
@@ -80,10 +81,15 @@ def add_label(s, pos, name, label_type, pin_type, path):
             'right' : (x, 0),
         }[p])
         s.add(Wire(last_pos, pos))
-        dir=p
+    return pos
+
+def add_label(s, pos, name, label_type, pin_type, path):
+    pos = draw_wire(s, pos, path)
+    dir = "right" 
+    if len(path) > 0:
+        dir=path[-1][0]
 
     rot = { 'up': 90, 'down': 270, 'left': 180, 'right': 0 }[dir]
-
     s.add({ 'h' : HierarchicalLabel, 'l' : Label}[label_type](pos, name, pin_type, rot=rot))
 
 def get_keys_schematic(conf):
@@ -134,28 +140,40 @@ def get_keys_schematic(conf):
 
     return s
 
-#def LED_driver_symbol(s, pos, n, pin_labels):
-#    d = TLC5916(schema_pos(*pos), designator("U"), f"TLC5916_{n}", footprint="Package_SO:TSSOP-16_4.4x5mm_P0.65mm")
-#    s.add(d)
-#    add_label(s, d.pos("VDD"), "V_in", "h", "input", [ ("up", 2.54), ("right", 2.54) ])
-#    add_label(s, d.pos("GND"), "gnd", "h", "input", [ ("down", 2.54), ("right", 2.54) ])
-#    add_label(s, d.pos("CLK"), "clk", "h", "input", [ ("left", 2.54) ])
-#    add_label(s, d.pos("OE"), "oe", "h", "input", [ ("left", 2.54) ])
-#    add_label(s, d.pos("LE"), "latch", "h", "input", [ ("left", 2.54) ])
-#
-#    add_label(s, d.pos("SDO"), f"data_out{n}", "l", None, [ ("right", 2.54) ])
-#
-#    if (n == 0):
-#        d_in = "data"
-#        add_label(s, d.pos("SDI"), "data", "h", "input", [ ("left", 2.54) ])
-#    else:
-#        add_label(s, d.pos("SDI"), f"data_out{n-1}", "l", None, [ ("left", 2.54) ])
-#
-#    for i, label in enumerate(pin_labels):
-#        add_label(s, d.pos(f"OUT{i}"), "label", "l", None, [ ('right', 2.54) ])
+def LED_driver_symbol(s, pos, n, pin_labels):
+    d = TLC5916(schema_pos(*pos), designator("U"), f"TLC5916_{n}", footprint="Package_SO:TSSOP-16_4.4x5mm_P0.65mm")
+    s.add(d)
+    r = Resistor(draw_wire(s, d.pos(f"REXT"), [ ('left', 10.16), ("down", 2.54) ]), designator("R"), f'REXT_{n}', footprint='Resistor_SMD:R_0402_1005Metric', relative_to="1")
+    s.add(r)
+    c = Capacitor(add_pos(d.pos(), (-31.75, 0)), designator("C"), f'1uF', footprint='Capacitor_SMD:C_0402_1005Metric')
+    s.add(c)
+
+    for p in ( d.pos("VDD"), c.pos("1")):
+        add_label(s, p, "3V3", "h", "input", [ ("up", 2.54), ("right", 2.54) ])
+
+    for p in ( d.pos("GND"), r.pos("2"), c.pos("2") ):
+        add_label(s, p, "gnd", "h", "input", [ ("down", 2.54), ("right", 2.54) ])
+
+
+    add_label(s, d.pos("CLK"), "clk", "h", "input", [ ("left", 2.54) ])
+    add_label(s, d.pos("OE"), "oe", "h", "input", [ ("left", 2.54) ])
+    add_label(s, d.pos("LE"), "latch", "h", "input", [ ("left", 2.54) ])
+
+    add_label(s, d.pos("SDO"), f"data_out{n}", "l", None, [ ("right", 2.54) ])
+
+    if (n == 0):
+        add_label(s, d.pos("SDI"), "data_left", "h", "input", [ ("left", 2.54) ])
+    elif (n == 7):
+        add_label(s, d.pos("SDI"), "data_right", "h", "input", [ ("left", 2.54) ])
+    else:
+        add_label(s, d.pos("SDI"), f"data_out{n-1}", "l", None, [ ("left", 2.54) ])
+
+    for i, label in enumerate(pin_labels):
+        add_label(s, d.pos(f"OUT{i}"), label, "l", None, [ ('right', 2.54) ])
 
 def get_LEDs_schematic(conf):
     s = Schematic(paper="A3")
+    mapping = get_led_mapping()
 
     for r_ix, row in enumerate(conf):
         for key in row:
@@ -164,8 +182,8 @@ def get_LEDs_schematic(conf):
             add_label(s, key['LED'].pos("A"), "V_in", "h", "input", [ ("right", 1.27), ('up', 5.08), ('right', 1.27) ])
             add_label(s, key['LED'].pos("K"), "led_"+key['key'], "l", None, [ ("left", 1.27), ('down', 7.62), ('left', 1.27) ])
 
-#    for i in range(12):
-#        LED_driver_symbol(s, (50.8+i*63.5, 177.8), i, ('a', 'b','c','d','e','f','g','h'))
+    for i in range(11):
+        LED_driver_symbol(s, (50.8+i*63.5, 177.8), i, mapping[i])
 
     return s
 

@@ -394,11 +394,168 @@ class TLC5916Symbol(Symbol):
 """
 
 
+class ResistorSymbol(Symbol):
+    def __init__(self, name):
+        anchors = {
+            "1": ( 0, -3.81 ),
+            "2": ( 0, 3.81 ),
+            "Reference": ( 2.032, 0 ),
+            "Value": ( 0, -0 ),
+            "Footprint": ( -1.778, 0 ),
+            "Datasheet": ( 0, 0 ),
+            "Description": ( 0, 0 ),
+ 
+        }
+        super().__init__(name, anchors)
+
+
+    def definition(self):
+        def at(s, a=0):
+            return str_at(yflip(self.pos(s)), a)
+        return f"""
+        (symbol "{self.name()}"
+            (pin_numbers (hide yes))
+            (pin_names (offset 0))
+            (exclude_from_sim no)
+            (in_bom yes)
+            (on_board yes)
+            (property "Reference" "R" {at("Reference", 90)} (effects (font (size 1.27 1.27))))
+            (property "Value" "R" {at("Value", 90)} (effects (font (size 1.27 1.27))))
+            (property "Footprint" "" {at("Footprint", 90)} (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "Datasheet" "~" {at("Datasheet", 0)} (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "Description" "Resistor" {at("Description", 0)} (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "ki_keywords" "R res resistor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "ki_fp_filters" "R_*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+            (symbol "R_0_1"
+                (rectangle (start -1.016 -2.54) (end 1.016 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+            )
+            (symbol "R_1_1"
+                (pin passive line (at 0 3.81 270) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+                (pin passive line (at 0 -3.81 90) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+            )
+            (embedded_fonts no)
+        )
+"""
+
+    def instance(self, instance):
+        ref = instance.ref()
+        if ref is None:
+            ref = "R"
+        value = instance.value()
+        if value is None:
+            value = "R"
+
+        footprint = instance.footprint()
+        if footprint is None:
+            footprint = ""
+
+        def at(s=None, a=0):
+            return str_at(instance.pos(s), a)
+        return f"""
+   (symbol
+        (lib_id "{self.name()}")
+        {at()}
+        (unit 1)
+        (exclude_from_sim no)
+        (in_bom yes)
+        (on_board yes)
+        (dnp no)
+        (property "Reference" "{ref}" {at("Reference")} (effects (font (size 1.27 1.27))))
+        (property "Value" "{value}" {at("Value")} (effects (font (size 1.27 1.27))))
+        (property "Footprint" "{footprint}" {at("Footprint")} (effects (font (size 1.27 1.27)) (hide yes)))
+        (property "Datasheet" "" {at("Datasheet")} (effects (font (size 1.27 1.27)) (hide yes)))
+        (property "Description" "" {at("Description")} (effects (font (size 1.27 1.27))))
+        (pin "1")
+        (pin "2")
+    )
+"""
+
+class CapacitorSymbol(Symbol):
+    def __init__(self, name):
+        anchors = {
+            "1": ( 0, -3.81 ),
+            "2": ( 0, 3.81 ),
+            "Reference": ( 0.635, -2.54 ),
+            "Value": ( 0.635, 2.54 ),
+            "Footprint": ( 0.9652, 3.81 ),
+            "Datasheet": ( 0, 0 ),
+            "Description": ( 0, 0 ),
+ 
+        }
+        super().__init__(name, anchors)
+
+
+    def definition(self):
+        def at(s, a=0):
+            return str_at(yflip(self.pos(s)), a)
+        return f"""
+        (symbol "{self.name()}"
+            (pin_numbers (hide yes))
+            (pin_names (offset 0))
+            (exclude_from_sim no)
+            (in_bom yes)
+            (on_board yes)
+            (property "Reference" "C" {at("Reference")} (effects (font (size 1.27 1.27))))
+            (property "Value" "C" {at("Value")} (effects (font (size 1.27 1.27))))
+            (property "Footprint" "" {at("Footprint")} (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "Datasheet" "~" {at("Datasheet")} (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "Description" "Resistor" {at("Description", 0)} (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "ki_keywords" "C cap capacitor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+            (property "ki_fp_filters" "C_*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+            (symbol "C_0_1" 
+                (polyline (pts (xy -2.032 0.762) (xy 2.032 0.762)) (stroke (width 0.508) (type default)) (fill (type none)))
+                (polyline (pts (xy -2.032 -0.762) (xy 2.032 -0.762)) (stroke (width 0.508) (type default)) (fill (type none)))
+            )
+            (symbol "C_1_1"
+                (pin passive line (at 0 3.81 270) (length 2.794) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+                (pin passive line (at 0 -3.81 90) (length 2.794) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+            )
+            (embedded_fonts no)
+        )
+"""
+
+    def instance(self, instance):
+        ref = instance.ref()
+        if ref is None:
+            ref = "C"
+        value = instance.value()
+        if value is None:
+            value = "C"
+
+        footprint = instance.footprint()
+        if footprint is None:
+            footprint = ""
+
+        def at(s=None, a=0):
+            return str_at(instance.pos(s), a)
+        return f"""
+   (symbol
+        (lib_id "{self.name()}")
+        {at()}
+        (unit 1)
+        (exclude_from_sim no)
+        (in_bom yes)
+        (on_board yes)
+        (dnp no)
+        (property "Reference" "{ref}" {at("Reference")} (effects (font (size 1.27 1.27))))
+        (property "Value" "{value}" {at("Value")} (effects (font (size 1.27 1.27))))
+        (property "Footprint" "{footprint}" {at("Footprint")} (effects (font (size 1.27 1.27)) (hide yes)))
+        (property "Datasheet" "" {at("Datasheet")} (effects (font (size 1.27 1.27)) (hide yes)))
+        (property "Description" "" {at("Description")} (effects (font (size 1.27 1.27))))
+        (pin "1")
+        (pin "2")
+    )
+"""
+
+
+
 _symbols = {
-	'Switch:SW_Push': SwitchSymbol('Switch:SW_Push'),
-	'Device:D_Schottky': DiodeSymbol('Device:D_Schottky'),
-	'Device:LED': LEDSymbol('Device:LED'),
-	'Driver_LED:TLC5916': TLC5916Symbol('Driver_LED:TLC5916'),
+    'Switch:SW_Push': SwitchSymbol('Switch:SW_Push'),
+    'Device:D_Schottky': DiodeSymbol('Device:D_Schottky'),
+    'Device:LED': LEDSymbol('Device:LED'),
+    'Driver_LED:TLC5916': TLC5916Symbol('Driver_LED:TLC5916'),
+    'Device:R': ResistorSymbol('Device:R'),
+    'Device:C': CapacitorSymbol('Device:C'),
 }
 
 class Component:
@@ -492,6 +649,13 @@ class LED(Component):
     def __init__(self, at=(0,0), ref=None, value=None, footprint=None, relative_to=None):
         super().__init__(at, ref, value, footprint, relative_to, 'Device:LED')
 
+class Resistor(Component):
+    def __init__(self, at=(0,0), ref=None, value=None, footprint=None, relative_to=None):
+        super().__init__(at, ref, value, footprint, relative_to, 'Device:R')
+
+class Capacitor(Component):
+    def __init__(self, at=(0,0), ref=None, value=None, footprint=None, relative_to=None):
+        super().__init__(at, ref, value, footprint, relative_to, 'Device:C')
 
 class TLC5916(Component):
     def __init__(self, at=(0,0), ref=None, value=None, footprint=None, relative_to=None):

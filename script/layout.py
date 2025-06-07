@@ -47,3 +47,36 @@ def get_layout():
 
     return keys
 
+def get_led_mapping():
+
+    mapped = [ [ f"drv_{i}_{c}" for c in 'abcdefgh' ] for i in range(11) ]
+
+    def do_map(i, keys):
+        for m in mapped:
+             for j, key in enumerate(keys):
+                 if key is not None:
+                     assert key not in [ k for r in mapped for k in r ]
+                     mapped[i][j] = f'led_{key}'
+
+    do_map(6, ( 'esc', 'tilde', 'z', 'fn', 'tab', 'capslock', 'leftshift', 'leftcontrol' ) )
+    do_map(5, ( 'alt', 'x', 's', 'w', '1', 'q', 'a', 'f1' ) )
+    do_map(4, ( 'd', 'e', '3', 'v', 'c', '2', 'f3', 'f2' ) )
+    do_map(3, ( 'space', 'b', 'g', 't', '4', 'r', 'f', 'f4' ) )
+    do_map(2, ( 'y', '6', 'j', 'm', 'h', 'n', '5', 'f5' ) )
+    do_map(1, ( 'f7', 'comma', 'i', 'k', 'altgr', '7', 'u', 'f6' ) )
+    do_map(0, ( None, 'l', 'o', '9', 'dot', 'win', '8', 'f8' ) )
+    do_map(7, ( 'minus', 'openbracket', 'quote', 'menu', '0', 'p', 'semicolon', 'slash' ) )
+    do_map(8, ( 'f11', 'f10', 'closebracket', 'equals', 'enter', 'rightshift', 'rightcontrol', 'f9' ) )
+    do_map(9, ( 'printscreen', 'delete', 'up', 'down', 'left', 'backspace', 'backslash', 'f12' ) )
+    do_map(10, ( 'pause', 'pageup', 'pagedown', 'right', 'home', 'end', 'insert', 'scrollock' ) )
+
+    flat_mapped = [ k for r in mapped for k in r ]
+    keynames = [ f'led_{x["key"]}' for r in get_layout() for x in r ]
+
+    for k in keynames:
+        if k not in flat_mapped:
+             print(k)
+             assert k in flat_mapped
+
+    return mapped
+

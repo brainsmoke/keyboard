@@ -1,10 +1,10 @@
 
 BUILDDIR=build/%
 TMPDIR=tmp/%
-PCB=%/$(BASENAME).kicad_pcb
-SCHEMATIC=%/$(BASENAME).kicad_sch
+PCB=pcb/%/$(BASENAME).kicad_pcb
+SCHEMATIC=pcb/%/$(BASENAME).kicad_sch
 ifeq ($(REQUIRE_DRC), y)
-DRC_REPORT=%/$(BASENAME).drc
+DRC_REPORT=pcb/%/$(BASENAME).drc
 else
 DRC_REPORT=
 endif

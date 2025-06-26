@@ -45,6 +45,19 @@ def get_layout():
 
         y += dy
 
+    for row, r in enumerate(keys[:-1]):
+        for col, key in zip(range(16), r):
+            key['matrix'] = (col, row)
+
+    for row, r in [ [5, keys[-1]] ]:
+        for col, key in zip([0,1,2,5,8,9,11,12,13,14,15], r):
+            key['matrix'] = (col, row)
+
+    keys[4][11]['matrix'] = (12, 4)
+    keys[4][12]['matrix'] = (14, 4)
+    keys[1][16]['matrix'] = (15, 3)
+    keys[2][16]['matrix'] = (15, 4)
+
     return keys
 
 def get_led_mapping():

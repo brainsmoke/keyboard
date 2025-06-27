@@ -2,6 +2,7 @@
 #define CONFIG_H
 
 #include <libopencm3/stm32/gpio.h>
+#include <libopencmsis/core_cm3.h>
 
 #define MANUFACTURER_STRING "example co."
 #define PRODUCT_STRING "usb serial demo"

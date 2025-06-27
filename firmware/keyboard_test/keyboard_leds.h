@@ -42,10 +42,11 @@
 #define BUFFER_BIT_DATA_LEFT (BIT_DATA_LEFT>>8)
 #define BUFFER_BIT_DATA_RIGHT (BIT_DATA_RIGHT>>8)
 
-
+#define N_LEDS (88) /* one driver output is not connected */
+#define N_CHANNELS (2)
 #define MAX_BITS_PER_CHANNEL (56)
-#define CHANNEL_PINS { BIT_DATA_LEFT, BIT_DATA_RIGHT, 0 }
-#define CHANNEL_SIZES { 56, 32, 0 }
+#define CHANNEL_PIN { BUFFER_BIT_DATA_LEFT, BUFFER_BIT_DATA_RIGHT }
+#define CHANNEL_START { 0, MAX_BITS_PER_CHANNEL-32 }
 
 /* sends 56x bits parallel at 1/8th the clockspeed
  * gpio is the GPIO base address
@@ -54,6 +55,9 @@
  */
 void bitbang_56bits_stm32(uint8_t *buffer, volatile uint32_t *gpio_data_clock, volatile uint32_t *gpio_latch_enable, uint32_t not_enable_mask);
 void write_wait_write(volatile uint32_t *addr, uint32_t pre_data, uint32_t post_data, uint32_t cycles);
+
+void init_leds(void);
+void write_frame(uint8_t fb[N_LEDS]);
 
 #endif
 

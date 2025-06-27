@@ -41,14 +41,13 @@ bitbang_56bits_stm32_start:
 #undef rBUF
 #define rOUT2 r0
 
-/* 450 + 2 */ ldr rOUT2, =BIT_LATCH
-/* 452 + 2 */ strh rCLK, [rGPIO_DATA_CLK, #GPIO_BSRR_OFFSET]
-/* 454 + 1 */ orrs rOUT, rCLK
-/* 455 + 1 */ orrs rOUT2, rOUTPUT_ENABLE_MASK
-
-/* 456 + 2 */ str rOUT2, [rGPIO_LATCH_EN, #GPIO_BSRR_OFFSET]
-/* 458 + 2 */ str rOUT, [rGPIO_DATA_CLK, #GPIO_BRR_OFFSET]
-/* 460 + 2 */ str rOUT2, [rGPIO_LATCH_EN, #GPIO_BRR_OFFSET]
+/* 450 + 1 */ orrs rOUT, rCLK
+/* 451 + 2 */ ldr rOUT2, =(BIT_LATCH|BIT_NOT_OUTPUT_ENABLE)
+/* 453 + 2 */ strh rCLK, [rGPIO_DATA_CLK, #GPIO_BSRR_OFFSET]
+/* 455 + 2 */ str rOUT2, [rGPIO_LATCH_EN, #GPIO_BSRR_OFFSET]
+/* 457 + 2 */ strh rOUT, [rGPIO_DATA_CLK, #GPIO_BRR_OFFSET]
+/* 459 + 1 */ bics rOUT2, rOUTPUT_ENABLE_MASK
+/* 460 + 2 */ strh rOUT2, [rGPIO_LATCH_EN, #GPIO_BRR_OFFSET]
 /* 462 + 3 */ pop {r4,r5}
 
 bitbang_56bits_stm32_end:

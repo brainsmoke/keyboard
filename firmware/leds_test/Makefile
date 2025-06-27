@@ -1,6 +1,6 @@
 
 OPENCM3_DIR=../libopencm3
-SHARED_DIR=../common
+SHARED_DIR=../common ../keyboard_common
 PROJECT=keyboard_test
 CFILES=main.c usb_serial.c util.c usb_double_buf.c keyboard_leds.c millis.c
 AFILES=bitbang.S m0delay.S

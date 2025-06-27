@@ -37,7 +37,6 @@
 #include "config.h"
 #include "util.h"
 #include "millis.h"
-#include "usb_serial.h"
 #include "keyboard_leds.h"
 
 uint8_t fb[N_LEDS];
@@ -49,8 +48,6 @@ static void init(void)
 	rcc_periph_clock_enable(RCC_GPIOB);
 	rcc_periph_clock_enable(RCC_GPIOC);
  
-	usb_serial_init();
-
 	millis_timer_init();
 
 	memset(fb, 0xff, sizeof(fb));
@@ -65,16 +62,8 @@ static void time_poll(void)
 {
 	uint16_t t = millis_u16();
 	if ( (uint16_t)(t-t0) > 1000/FPS)
-//if (usb_serial_getchar() > 0)	
 	{
 		write_frame(fb);
-//uint8_t buf[4];
-//buf[0]="0123456789ABCDEF"[fb[0]>>4];
-//buf[1]="0123456789ABCDEF"[fb[0]&15];
-//buf[2]='\r';
-//buf[3]='\n';
-//usb_serial_write_noblock(buf, 4);
-
 		memset(fb, brightness++, sizeof(fb));
 		t0 = t;
 	}
@@ -85,9 +74,6 @@ int main(void)
 	init();
 
 	for(;;)
-	{
-		usb_serial_poll();
 		time_poll();
-	}
 }
 

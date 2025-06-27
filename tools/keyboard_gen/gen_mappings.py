@@ -1,7 +1,7 @@
 
 import sys
 
-from layout import get_layout
+from layout import get_layout, get_led_mapping
 
 class CHeader:
     def __init__(self, name):
@@ -38,6 +38,10 @@ for i in range(1,12+1):
     keycodes.append( f'f{i}' )
 for k in ('printscreen', 'scrollock', 'pause', 'insert', 'home', 'pageup', 'delete', 'end', 'pagedown', 'right', 'left', 'down', 'up'):
     keycodes.append( k )
+keycodes += [None]*(0xE0-len(keycodes))
+for k in ('leftcontrol', 'leftshift', 'alt', 'win', 'rightcontrol', 'rightshift', 'altgr', 'menu'):
+    keycodes.append( k )
+
 
 def matrix_id(x, y):
     return 16*y + x
@@ -51,6 +55,13 @@ for x in range(16):
     matrix_keys[matrix_id(x, max_row+1)] = matrix_keys[x]+'_alt'
 
 
+
+led_map = []
+
+m=get_led_mapping()
+for i in (6,5,4,3,2,1,0,10,9,8,7):
+    led_map.extend( [ s[4:] for s in  m[i] ])
+
 def print_enum_defs(arr, prefix='', name = None):
     with CEnum(name):
         for i, s in enumerate(arr):
@@ -63,5 +74,6 @@ if __name__ == '__main__':
             print('#include "config.h"\n')
             print_enum_defs(matrix_keys, 'MATRIX_', 'matrix_keys')
             print_enum_defs(keycodes, 'KEYCODE_', 'keycodes')
+            print_enum_defs(led_map, 'LED_', 'led_index')
     elif sys.argv[1] == 'tables':
             print('#include "keyboard_defs.h"\n')

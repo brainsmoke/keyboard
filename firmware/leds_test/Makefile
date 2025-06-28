@@ -1,7 +1,7 @@
 
 OPENCM3_DIR=../libopencm3
 SHARED_DIR=../common ../keyboard_common
-PROJECT=keyboard_test
+PROJECT=leds_test
 CFILES=main.c util.c keyboard_leds.c millis.c
 AFILES=bitbang.S m0delay.S
 

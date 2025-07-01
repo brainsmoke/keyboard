@@ -93,10 +93,10 @@ usb_serial_write_noblock(buf, 7);
 void keymatrix_down(int key)
 {
 uint8_t buf[9];
-buf[0] = 'U';
-buf[1] = 'U';
-buf[2] = 'U';
-buf[3] = 'P';
+buf[0] = 'D';
+buf[1] = 'O';
+buf[2] = 'W';
+buf[3] = 'N';
 buf[4] = ' ';
 buf[5]="0123456789ABCDEF"[key>>4];
 buf[6]="0123456789ABCDEF"[key&15];

@@ -1,4 +1,7 @@
 
+def table_size(N):
+    return (N*(N+1))//2
+
 def table_index(i, j, N):
     if i < j:
         i, j = j, i

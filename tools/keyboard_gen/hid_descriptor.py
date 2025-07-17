@@ -294,13 +294,22 @@ def parse_item(line, ctx):
     return item(scope, tag, argfunc(args, ctx))
     
 
-ctx = {}
-import sys
-for line in sys.stdin:
-    if line.strip() == '':
-        continue
-    b = parse_item(line, ctx)
-    l = ''.join(f'0x{x:02x},' for x in b )
-    l += ' '*max(0, 16-len(l))
-    print( '\t'+l+'/* '+line.strip()+' */')
+def parse_hid_descriptor(s):
+    data = []
+    ctx = {}
+    for line in s.split('\n'):
+        if line.strip() == '' or line.strip().startswith('#'):
+            continue
+        b = parse_item(line, ctx)
+        l = ''.join(f'0x{x:02x},' for x in b )
+        l += ' '*max(0, 16-len(l))
+        data.append( '\t'+l+'/* '+line.strip()+' */\n')
+
+    return ''.join(data)
     
+
+if __name__ == '__main__':
+    import sys
+    print(parse_hid_descriptor(sys.stdin.read()), end='')
+
+

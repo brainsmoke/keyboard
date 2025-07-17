@@ -77,7 +77,7 @@ def get_led_mapping():
     do_map(3, ( 'space', 'b', 'g', 't', '4', 'r', 'f', 'f4' ) )
     do_map(2, ( 'y', '6', 'j', 'm', 'h', 'n', '5', 'f5' ) )
     do_map(1, ( 'f7', 'comma', 'i', 'k', 'altgr', '7', 'u', 'f6' ) )
-    do_map(0, ( None, 'l', 'o', '9', 'dot', 'win', '8', 'f8' ) )
+    do_map(0, ( 'unused', 'l', 'o', '9', 'dot', 'win', '8', 'f8' ) )
     do_map(7, ( 'minus', 'openbracket', 'quote', 'menu', '0', 'p', 'semicolon', 'slash' ) )
     do_map(8, ( 'f11', 'f10', 'closebracket', 'equals', 'enter', 'rightshift', 'rightcontrol', 'f9' ) )
     do_map(9, ( 'printscreen', 'delete', 'up', 'down', 'left', 'backspace', 'backslash', 'f12' ) )

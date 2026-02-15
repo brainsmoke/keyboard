@@ -4,7 +4,7 @@ Library.bak
 project.drc
 __pycache__
 /pcb/*/*.kicad_sch-bak
-/pcb/*/*.prl
+/pcb/*/*.kicad_prl
 /firmware/*/*.bin
 /firmware/*/*.elf
 /firmware/*/*.dfu

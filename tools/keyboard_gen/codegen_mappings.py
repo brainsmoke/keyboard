@@ -292,14 +292,14 @@ def print_hid_descriptor():
 
 if __name__ == '__main__':
     if sys.argv[1] == 'header':
-        with CHeader("KEYBOARD_DEFS_H"):
+        with CHeader("CODEGEN_HEADER_H"):
             codegen_comment('header')
             print('#include "config.h"\n')
             print_enum_defs_swap_fn(matrix_defs, 'MATRIX_', 'matrix_defs')
             print_enum_defs(keycodes, 'KEYCODE_', 'keycodes')
             print_enum_defs_swap_fn(led_indices, 'LED_', 'led_index')
     elif sys.argv[1] == 'tables':
-            print('#include "keyboard_defs.h"\n')
+            print('#include "codegen_header.h"\n')
             codegen_comment('tables')
             print_hid_descriptor()
             print_table(matrix_to_report_bit, 'static const struct { uint8_t byte, mask; } matrix_to_report_bit[]')

@@ -1,0 +1,13 @@
+project-backups/
+fp-info-cache
+Library.bak
+project.drc
+__pycache__
+/pcb/*/*.kicad_sch-bak
+/pcb/*/*.prl
+/firmware/*/*.bin
+/firmware/*/*.elf
+/firmware/*/*.dfu
+/firmware/*/*.ld
+/firmware/*/bin
+/tmp/

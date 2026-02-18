@@ -85,9 +85,9 @@ static volatile uint32_t need_update, usb_ready;
 enum
 {
 	NO_STRING = 0,
-    MANUFACTURER,
-    PRODUCT,
-    SERIAL,
+	MANUFACTURER,
+	PRODUCT,
+	SERIAL,
 };
 
 static const char *const string_descriptors[] =
@@ -140,9 +140,9 @@ static size_t create_hid_keypad_descriptor(uint8_t buf[], size_t len, const uint
 {
 	const uint8_t hid_keypad_prologue[] =
 	{
-        0x05,0x01,      /* Usage Page (Generic Desktop) */
-        0x09,0x07,      /* Usage (Keypad) */
-        0xa1,0x01,      /* Collection (Application) */
+		0x05,0x01,      /* Usage Page (Generic Desktop) */
+		0x09,0x07,      /* Usage (Keypad) */
+		0xa1,0x01,      /* Collection (Application) */
 	};
 
 	if (n_keys >= 256)
@@ -265,7 +265,7 @@ static enum usbd_request_return_codes hid_control_callback(usbd_device *dev,
 	(void)complete;
 
 	if( req->bmRequestType != REQ_INTERFACE ||
-        req->bRequest != USB_REQ_GET_DESCRIPTOR ||
+	    req->bRequest != USB_REQ_GET_DESCRIPTOR ||
 	    req->wValue != (USB_HID_DT_REPORT<<8) )
 		return USBD_REQ_NOTSUPP;
 

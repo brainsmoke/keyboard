@@ -134,7 +134,7 @@ def get_matrix_to_keycode(matrix_defs, keycodes):
     matrix_to_keycode = [None]*len(matrix_defs)
 
     for i, key in enumerate(matrix_defs):
-        val = '0xff'
+        val = 'KEY_NONE'
 
         if key is None:
             ix = f'0x{i:x}'
@@ -249,6 +249,13 @@ def print_enum_defs(arr, prefix='', name = None):
             if s is not None:
                 print (f'\t{prefix}{s} = 0x{i:x},')
 
+
+def print_enum_defs_keycodes(arr, prefix='', name = None):
+    with CEnum(name):
+        for i, s in enumerate(arr):
+            if s is not None:
+                print (f'\t{prefix}{s} = HID_KEY(HID_KEYBOARD_PAGE, 0x{i:x}),')
+
 def print_enum_defs_swap_fn(arr, prefix, name):
     fn_index = arr.index("fn")
     leftcontrol_index = arr.index("leftcontrol")
@@ -262,7 +269,7 @@ f"""/* define for ThinkPad style layout: */
 #ifdef SWAP_CONTROL_AND_FN
 	{prefix}leftcontrol = 0x{fn_index:x},
 	{prefix}fn = 0x{leftcontrol_index:x},
-#elif
+#else
 	{prefix}leftcontrol = 0x{leftcontrol_index:x},
 	{prefix}fn = 0x{fn_index:x},
 #endif""")
@@ -295,15 +302,16 @@ if __name__ == '__main__':
         with CHeader("CODEGEN_HEADER_H"):
             codegen_comment('header')
             print('#include "config.h"\n')
+            print('#include "hid_keydef.h"\n')
             print_enum_defs_swap_fn(matrix_defs, 'MATRIX_', 'matrix_defs')
-            print_enum_defs(keycodes, 'KEYCODE_', 'keycodes')
+            print_enum_defs_keycodes(keycodes, 'KEYCODE_', 'keycodes')
             print_enum_defs_swap_fn(led_indices, 'LED_', 'led_index')
     elif sys.argv[1] == 'tables':
             print('#include "codegen_header.h"\n')
             codegen_comment('tables')
             print_hid_descriptor()
-            print_table(matrix_to_report_bit, 'static const struct { uint8_t byte, mask; } matrix_to_report_bit[]')
-            print_table(matrix_to_keycode, 'static const uint8_t matrix_to_keycode[]')
+            #print_table(matrix_to_report_bit, 'static const struct { uint8_t byte, mask; } matrix_to_report_bit[]')
+            print_table(matrix_to_keycode, 'static const uint32_t matrix_to_keycode[]')
             print_table(matrix_to_led, 'static const uint8_t matrix_to_led[]')
     elif sys.argv[1] == 'led_distances':
             codegen_comment('led_distances')

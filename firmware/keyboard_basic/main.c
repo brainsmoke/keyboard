@@ -50,13 +50,14 @@ static uint8_t fb[N_LEDS];
 static uint32_t extra_keys[] = { FN_ALTERNATIVES(HID_CODES) };
 #undef HID_CODES
 
+static uint8_t color_normal = 0x3f;
+static uint8_t color_on = 0xff;
+
 static uint32_t alt_keymap[KEYMATRIX_N_KEYS] =
 {
 #define MAPPING(a,b) [a] = b,
 	FN_ALTERNATIVES(MAPPING)
 #undef MAPPING
-//	[MATRIX_esc]          = KEYCODE_esc,
-//	[MATRIX_fn]           = KEY_NONE,
 	[MATRIX_leftshift]    = KEYCODE_leftshift,
 	[MATRIX_rightshift]   = KEYCODE_rightshift,
 	[MATRIX_leftcontrol]  = KEYCODE_leftcontrol,
@@ -66,6 +67,21 @@ static uint32_t alt_keymap[KEYMATRIX_N_KEYS] =
 	[MATRIX_menu]         = KEYCODE_menu,
 	[MATRIX_rightcontrol] = KEYCODE_rightcontrol,
 };
+
+static int fn_pressed = 0;
+static int fn_lock = 0;
+static int caps_lock_on = 0;
+static int scroll_lock_on = 0;
+
+static void set_backlight(uint8_t normal, uint8_t on)
+{
+	memset(fb, normal, sizeof(fb));
+	fb[LED_capslock] = caps_lock_on ? on : normal;
+	fb[LED_scrollock] = scroll_lock_on ? on : normal;
+	fb[LED_esc] = fn_lock ? on : normal;
+
+	write_frame(fb);
+}
 
 static void init(void)
 {
@@ -78,18 +94,15 @@ static void init(void)
 
 	millis_timer_init();
 
-	memset(fb, 0xff, sizeof(fb));
 	init_leds();
-		write_frame(fb);
-
+	set_backlight(color_normal, color_on);
 	keymatrix_init();
 }
 
-#define FPS (25)
 static uint16_t t0=0;
-static uint8_t brightness = 0;
 static void time_poll(void)
 {
+/*
 	uint16_t t = millis_u16();
 	if ( (uint16_t)(t-t0) > 1000/FPS)
 	{
@@ -97,11 +110,21 @@ static void time_poll(void)
 		memset(fb, brightness++, sizeof(fb));
 		t0 = t;
 	}
+*/
 }
 
-static int fn_pressed = 0;
-static int fn_lock = 0;
- 
+static void change_backlight(void)
+{
+	/*  */
+}
+
+void usb_hid_keyboard_led_state(uint8_t led_state)
+{
+	caps_lock_on = led_state & HID_REPORT_LED_CAPS_LOCK;
+	scroll_lock_on = led_state & HID_REPORT_LED_SCROLL_LOCK;
+	set_backlight(color_normal, color_on);
+}
+
 /* to be implemented by user */
 void keymatrix_down(int key)
 {
@@ -110,6 +133,21 @@ void keymatrix_down(int key)
 		usb_hid_keyboard_clear_keys(); /* does not clear modifier keys */
 		fn_pressed = 1;
 		return;
+	}
+
+	if (fn_pressed)
+	{
+		if (key == MATRIX_esc)
+		{
+			fn_lock = !fn_lock;
+			set_backlight(color_normal, color_on);
+			return;
+		}
+		else if (key == MATRIX_space)
+		{
+			change_backlight();
+			return;
+		}
 	}
 
 	int use_alt = fn_pressed;
@@ -150,6 +188,5 @@ int main(void)
 		keymatrix_poll(millis());
 		usb_hid_keyboard_poll();
 	}
-
 }
 

@@ -40,4 +40,12 @@ void usb_hid_keyboard_clear_keys(void);
 void usb_hid_keyboard_clear_modifiers(void);
 void usb_hid_keyboard_poll(void);
 
+#define HID_REPORT_LED_NUM_LOCK    (1<<0)
+#define HID_REPORT_LED_CAPS_LOCK   (1<<1)
+#define HID_REPORT_LED_SCROLL_LOCK (1<<2)
+#define HID_REPORT_LED_COMPOSE     (1<<3)
+#define HID_REPORT_LED_KANA        (1<<4)
+/* to be implemented by user */
+void usb_hid_keyboard_led_state(uint8_t bitmask);
+
 #endif // USB_HID_KEYBOARD_H

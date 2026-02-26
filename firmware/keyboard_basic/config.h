@@ -17,6 +17,8 @@
 #define KEYMATRIX_COLUMNS_PORT (GPIOB)
 #define KEYMATRIX_COLUMNS(X) X(15) X(14) X(13) X(12) X(11) X(10) X(2) X(1) X(0) X(6) X(9) X(8) X(7) X(5) X(4) X(3)
 
+#define REPORT_MAX_KEY (0x52)
+
 #include "hid_keydef.h"
  
 #define FN_ALTERNATIVES(X) \

@@ -79,10 +79,19 @@ _Static_assert(REPORT_KEYS_BITFIELD_NUMBITS < 256);
 #define REPORT_EXTRA_KEYS_BITFIELD_BIT_OFFSET (REPORT_KEYS_BITFIELD_BIT_OFFSET+REPORT_KEYS_BITFIELD_SIZE*8)
 
 #define REPORT_MAX_SIZE (REPORT_MOD_BITFIELD_SIZE+REPORT_RESERVED_SIZE+REPORT_ARRAY_SIZE+REPORT_KEYS_BITFIELD_SIZE+REPORT_EXTRA_KEYS_BITFIELD_MAX_SIZE)
+#define REPORT_SIZE(n_extra_keys) ((REPORT_EXTRA_KEYS_BITFIELD_BIT_OFFSET+(n_extra_keys)+7)>>3)
 
 static uint8_t report_descriptor[384];
 static uint8_t report[REPORT_MAX_SIZE];
 static uint8_t control[128];
+
+#define OUT_REPORT_LED_STATE_OFFSET (0)
+#define OUT_REPORT_LED_STATE_SIZE (1)
+static uint8_t out_report[OUT_REPORT_LED_STATE_SIZE];
+static uint8_t out_report_changed;
+
+static uint8_t idle_rate_4ms;
+static uint8_t current_protocol;
 
 static uint32_t extra_keymap[HID_KEYBOARD_MAX_EXTRA_KEYS];
 
@@ -104,9 +113,6 @@ static volatile uint32_t need_update, usb_ready;
 #define MILLISECONDS(x)  (x)
 
 #define COUNTRY_NONE (0)
-
-#define REQ_DEVICE_TO_HOST (0x80)
-#define REQ_INTERFACE      (REQ_DEVICE_TO_HOST|0x01)
 
 enum
 {
@@ -157,46 +163,41 @@ static single_report_hid_descriptor_t usb_hid_desciptor =
 	.wDescriptorLength = 0x4242,
 };
 
-static size_t report_size(size_t n_keys)
-{
-	return (REPORT_EXTRA_KEYS_BITFIELD_BIT_OFFSET+n_keys+7)>>3;
-}
-
-static const uint8_t hid_boot_keyboard_descriptor[] =
-{
-	0x05,0x01,      /* Usage Page (Generic Desktop) */
-	0x09,0x06,      /* Usage (Keyboard) */
-	0xa1,0x01,      /* Collection (Application) */
-	0x75,0x01,      /* Report Size (1) */
-	0x95,0x08,      /* Report Count (8) */
-	0x05,0x07,      /* Usage Page (Keyboard) */
-	0x19,0xe0,      /* Usage Minimum (224) */
-	0x29,0xe7,      /* Usage Maximum (231) */
-	0x15,0x00,      /* Logical Minimum (0) */
-	0x25,0x01,      /* Logical Maximum (1) */
-	0x81,0x02,      /* Input (Data, Variable, Absolute) */
-	0x95,0x01,      /* Report Count (1) */
-	0x75,0x08,      /* Report Size (8) */
-	0x81,0x01,      /* Input (Constant) */
-	0x95,0x05,      /* Report Count (5) */
-	0x75,0x01,      /* Report Size (1) */
-	0x05,0x08,      /* Usage Page (LED) */
-	0x19,0x01,      /* Usage Minimum (1) */
-	0x29,0x05,      /* Usage Maximum (5) */
-	0x91,0x02,      /* Output (Data, Variable, Absolute) */
-	0x95,0x01,      /* Report Count (1) */
-	0x75,0x03,      /* Report Size (3) */
-	0x91,0x01,      /* Output (Constant) */
-	0x95,0x06,      /* Report Count (6) */
-	0x75,0x08,      /* Report Size (8) */
-	0x15,0x00,      /* Logical Minimum (0) */
-	0x25,0xff,      /* Logical Maximum(255) */
-	0x05,0x07,      /* Usage Page (Keyboard) */
-	0x19,0x00,      /* Usage Minimum (0) */
-	0x29,0xff,      /* Usage Maximum (255) */
-	0x81,0x00,      /* Input (Data, Array) */
-	0xc0,           /* End Collection */
-};
+//static const uint8_t hid_boot_keyboard_descriptor[] =
+//{
+//	0x05,0x01,      /* Usage Page (Generic Desktop) */
+//	0x09,0x06,      /* Usage (Keyboard) */
+//	0xa1,0x01,      /* Collection (Application) */
+//	0x75,0x01,      /* Report Size (1) */
+//	0x95,0x08,      /* Report Count (8) */
+//	0x05,0x07,      /* Usage Page (Keyboard) */
+//	0x19,0xe0,      /* Usage Minimum (224) */
+//	0x29,0xe7,      /* Usage Maximum (231) */
+//	0x15,0x00,      /* Logical Minimum (0) */
+//	0x25,0x01,      /* Logical Maximum (1) */
+//	0x81,0x02,      /* Input (Data, Variable, Absolute) */
+//	0x95,0x01,      /* Report Count (1) */
+//	0x75,0x08,      /* Report Size (8) */
+//	0x81,0x01,      /* Input (Constant) */
+//	0x95,0x05,      /* Report Count (5) */
+//	0x75,0x01,      /* Report Size (1) */
+//	0x05,0x08,      /* Usage Page (LED) */
+//	0x19,0x01,      /* Usage Minimum (1) */
+//	0x29,0x05,      /* Usage Maximum (5) */
+//	0x91,0x02,      /* Output (Data, Variable, Absolute) */
+//	0x95,0x01,      /* Report Count (1) */
+//	0x75,0x03,      /* Report Size (3) */
+//	0x91,0x01,      /* Output (Constant) */
+//	0x95,0x06,      /* Report Count (6) */
+//	0x75,0x08,      /* Report Size (8) */
+//	0x15,0x00,      /* Logical Minimum (0) */
+//	0x25,0xff,      /* Logical Maximum(255) */
+//	0x05,0x07,      /* Usage Page (Keyboard) */
+//	0x19,0x00,      /* Usage Minimum (0) */
+//	0x29,0xff,      /* Usage Maximum (255) */
+//	0x81,0x00,      /* Input (Data, Array) */
+//	0xc0,           /* End Collection */
+//};
 
 static size_t create_hid_keyboard_descriptor(uint8_t buf[], size_t len, const uint32_t keys[], size_t n_keys)
 {
@@ -320,7 +321,7 @@ static const struct usb_interface_descriptor interface_desc =
 	.bAlternateSetting  = 0,
 	.bNumEndpoints      = 1,
 	.bInterfaceClass    = USB_CLASS_HID,
-	.bInterfaceSubClass = USB_HID_SUBCLASS_NO,
+	.bInterfaceSubClass = USB_HID_SUBCLASS_BOOT_INTERFACE,
 	.bInterfaceProtocol = USB_HID_INTERFACE_PROTOCOL_KEYBOARD,
 	.iInterface         = NO_STRING,
 
@@ -360,17 +361,97 @@ static enum usbd_request_return_codes hid_control_callback(usbd_device *dev,
 	(void)dev;
 	(void)complete;
 
-	if( req->bmRequestType != REQ_INTERFACE ||
-	    req->bRequest != USB_REQ_GET_DESCRIPTOR ||
-	    req->wValue != (USB_HID_DT_REPORT<<8) )
-		return USBD_REQ_NOTSUPP;
+	if( req->bmRequestType == (USB_REQ_TYPE_IN|USB_REQ_TYPE_STANDARD|USB_REQ_TYPE_INTERFACE) &&
+	    req->bRequest == USB_REQ_GET_DESCRIPTOR &&
+	    req->wValue == (USB_HID_DT_REPORT<<8) )
+	{
+		*buf = report_descriptor;
+		*len = usb_hid_desciptor.wDescriptorLength;
 
-	*buf = report_descriptor;
-	*len = usb_hid_desciptor.wDescriptorLength;
+		usb_ready=1;
 
-	usb_ready=1;
+		return USBD_REQ_HANDLED;
+	}
 
-	return USBD_REQ_HANDLED;
+	if ( req->bmRequestType == (USB_REQ_TYPE_IN|USB_REQ_TYPE_CLASS|USB_REQ_TYPE_INTERFACE) )
+	switch (req->bRequest)
+	{
+		case USB_HID_REQ_TYPE_GET_REPORT:
+		{
+			if ( req->wValue == (USB_HID_REPORT_TYPE_INPUT<<8) )
+			{
+				*buf = report;
+				*len = endpoint_desc.wMaxPacketSize;
+				return USBD_REQ_HANDLED;
+			}
+			else if ( req->wValue == (USB_HID_REPORT_TYPE_OUTPUT<<8) )
+			{
+				*buf = out_report;
+				*len = sizeof(out_report);
+				return USBD_REQ_HANDLED;
+			}
+			break;
+		}
+		case USB_HID_REQ_TYPE_GET_IDLE:
+		{
+			if (req->wValue == 0)
+			{
+				*buf = &idle_rate_4ms;
+				*len = 1;
+				return USBD_REQ_HANDLED;
+			}
+			break;
+		}
+		case USB_HID_REQ_TYPE_GET_PROTOCOL:
+		{
+			if (req->wValue == 0)
+			{
+				*buf = &current_protocol;
+				*len = 1;
+				return USBD_REQ_HANDLED;
+			}
+			break;
+		}
+		default:
+	}
+
+	if ( req->bmRequestType == (USB_REQ_TYPE_OUT|USB_REQ_TYPE_CLASS|USB_REQ_TYPE_INTERFACE) )
+	switch (req->bRequest)
+	{
+		case USB_HID_REQ_TYPE_SET_REPORT:
+		{
+			if ( (req->wValue == (USB_HID_REPORT_TYPE_OUTPUT<<8)) &&
+			     (req->wLength == sizeof(out_report)) )
+			{
+				memcpy(out_report, *buf, sizeof(out_report));
+				out_report_changed = 1;
+				return USBD_REQ_HANDLED;
+			}
+			break;
+		}
+		case USB_HID_REQ_TYPE_SET_IDLE:
+		{
+			if ( (req->wValue & 0xff) == 0)
+			{
+				idle_rate_4ms = (req->wValue >> 8);
+				return USBD_REQ_HANDLED;
+			}
+			break;
+		}
+		case USB_HID_REQ_TYPE_SET_PROTOCOL:
+		{
+			uint16_t prot = req->wValue;
+			if ( prot == USB_HID_PROTOCOL_BOOT || prot == USB_HID_PROTOCOL_REPORT )
+			{
+				current_protocol = req->wValue;
+				return USBD_REQ_HANDLED;
+			}
+			break;
+		}
+		default:
+	}
+
+	return USBD_REQ_NEXT_CALLBACK;
 }
 
 static void hid_set_config(usbd_device *dev, uint16_t wValue)
@@ -380,13 +461,21 @@ static void hid_set_config(usbd_device *dev, uint16_t wValue)
 	usbd_ep_setup(dev, USB_ENDPOINT_ADDR_IN(1), USB_ENDPOINT_ATTR_INTERRUPT, endpoint_desc.wMaxPacketSize, NULL);
 
 	usbd_register_control_callback(dev,
-	                               USB_REQ_TYPE_STANDARD|USB_REQ_TYPE_INTERFACE,
-	                               USB_REQ_TYPE_TYPE|USB_REQ_TYPE_RECIPIENT,
+	                               USB_REQ_TYPE_INTERFACE,
+	                               USB_REQ_TYPE_RECIPIENT,
 	                               hid_control_callback);
 }
 
 int usb_hid_keyboard_init(const uint32_t extra_keys[], size_t n_extra_keys)
 {
+	memset(report, 0, sizeof(report));
+	memset(out_report, 0, sizeof(out_report));
+	out_report_changed = 0;
+	idle_rate_4ms = 0;
+	current_protocol = USB_HID_PROTOCOL_REPORT;
+	usb_ready = 0;
+	need_update = 1;
+
 	if (n_extra_keys > HID_KEYBOARD_MAX_EXTRA_KEYS)
 		return 0;
 
@@ -399,14 +488,12 @@ int usb_hid_keyboard_init(const uint32_t extra_keys[], size_t n_extra_keys)
 	size_t len = create_hid_keyboard_descriptor(report_descriptor, sizeof(report_descriptor),
 		                                        extra_keymap, n_extra_keys);
 
-	memset(report, 0, sizeof(report));
-
 	if (len == 0)
 		return 0;
 
 	usb_hid_desciptor.wDescriptorLength = len;
 
-	endpoint_desc.wMaxPacketSize = report_size(n_extra_keys);
+	endpoint_desc.wMaxPacketSize = REPORT_SIZE(n_extra_keys);
 	extra_keys_bits = n_extra_keys;
 
 	device = usbd_init(&st_usbfs_v2_usb_driver, &device_desc, &config_desc,
@@ -414,9 +501,6 @@ int usb_hid_keyboard_init(const uint32_t extra_keys[], size_t n_extra_keys)
 	                   control, sizeof(control));
 
 	usbd_register_set_config_callback(device, hid_set_config);
-
-	need_update = 1;
-	usb_ready = 0;
 
 	return 1;
 }
@@ -433,14 +517,14 @@ static void report_array_add_key(uint32_t hid_key)
 			return;
 		}
 
-	report[REPORT_ARRAY_OFFSET+REPORT_ARRAY_SIZE-1] = ARRAY_ERROR_ROLLOVER;
+	memset(&report[REPORT_ARRAY_OFFSET], ARRAY_ERROR_ROLLOVER, REPORT_ARRAY_SIZE);
 }
 
 static void report_array_del_key(uint32_t hid_key)
 {
 	size_t array_ix = 0, byte_ix, bit;
 
-	if (report[REPORT_ARRAY_OFFSET+REPORT_ARRAY_SIZE-1] != ARRAY_ERROR_ROLLOVER)
+	if (report[REPORT_ARRAY_OFFSET] != ARRAY_ERROR_ROLLOVER)
 	{
 		for (; array_ix<REPORT_ARRAY_SIZE; array_ix++)
 			if (report[REPORT_ARRAY_OFFSET+array_ix] == hid_key)
@@ -461,7 +545,10 @@ static void report_array_del_key(uint32_t hid_key)
 						if (array_ix < REPORT_ARRAY_SIZE)
 							report[REPORT_ARRAY_OFFSET + array_ix++] = REPORT_MIN_KEY+byte_ix*8+bit;
 						else
-							report[REPORT_ARRAY_OFFSET + REPORT_ARRAY_SIZE - 1] = ARRAY_ERROR_ROLLOVER;
+						{
+							memset(&report[REPORT_ARRAY_OFFSET], ARRAY_ERROR_ROLLOVER, REPORT_ARRAY_SIZE);
+							return;
+						}
 					}
 		}
 	}
@@ -534,11 +621,22 @@ void usb_hid_keyboard_poll(void)
 	if (usb_ready && need_update)
 	{
 		need_update = 0;
-		if (usbd_ep_write_packet(device, endpoint_desc.bEndpointAddress,
-		                         report, endpoint_desc.wMaxPacketSize) !=
-		                                 endpoint_desc.wMaxPacketSize)
+
+		uint32_t report_size = endpoint_desc.wMaxPacketSize;
+		if (current_protocol == USB_HID_PROTOCOL_BOOT)
+			report_size = 8;
+
+		if ( usbd_ep_write_packet(device, endpoint_desc.bEndpointAddress, report,
+		                          report_size) != report_size )
 			need_update = 1;
 	}
+
 	usbd_poll(device);
+
+	if (out_report_changed)
+	{
+		out_report_changed = 0;
+		usb_hid_keyboard_led_state(out_report[OUT_REPORT_LED_STATE_OFFSET]);
+	}
 }
 

@@ -66,7 +66,7 @@ def get_led_mapping():
 
     def do_map(i, keys):
         for m in mapped:
-             for j, key in enumerate(keys):
+             for j, key in enumerate(reversed(keys)):
                  if key is not None:
                      assert key not in [ k for r in mapped for k in r ]
                      mapped[i][j] = f'led_{key}'

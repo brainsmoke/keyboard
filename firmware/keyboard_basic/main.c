@@ -50,8 +50,21 @@ static uint8_t fb[N_LEDS];
 static uint32_t extra_keys[] = { FN_ALTERNATIVES(HID_CODES) };
 #undef HID_CODES
 
-static uint8_t color_normal = 0x3f;
-static uint8_t color_on = 0xff;
+#define BACKLIGHT_MIN_STATE (0)
+#define BACKLIGHT_MAX_STATE (2)
+
+static const struct
+{
+	uint8_t normal;
+	uint8_t on;
+} color_table[BACKLIGHT_MAX_STATE+1] = 
+{
+	{0x00, 0x1f},
+	{0x1f, 0x7f},
+	{0x3f, 0xff},
+};
+
+static uint8_t backlight_state = BACKLIGHT_MIN_STATE;
 
 static uint32_t alt_keymap[KEYMATRIX_N_KEYS] =
 {
@@ -68,13 +81,18 @@ static uint32_t alt_keymap[KEYMATRIX_N_KEYS] =
 	[MATRIX_rightcontrol] = KEYCODE_rightcontrol,
 };
 
-static int fn_pressed = 0;
-static int fn_lock = 0;
-static int caps_lock_on = 0;
-static int scroll_lock_on = 0;
+static uint8_t fn_pressed = 0;
+static uint8_t fn_lock = 0;
+static uint8_t caps_lock_on = 0;
+static uint8_t scroll_lock_on = 0;
 
-static void set_backlight(uint8_t normal, uint8_t on)
+
+
+static void set_backlight(uint8_t state)
 {
+	uint8_t normal = color_table[state].normal,
+	        on     = color_table[state].on;
+
 	memset(fb, normal, sizeof(fb));
 	fb[LED_capslock] = caps_lock_on ? on : normal;
 	fb[LED_scrollock] = scroll_lock_on ? on : normal;
@@ -95,7 +113,7 @@ static void init(void)
 	millis_timer_init();
 
 	init_leds();
-	set_backlight(color_normal, color_on);
+	set_backlight(backlight_state);
 	keymatrix_init();
 }
 
@@ -115,14 +133,19 @@ static void time_poll(void)
 
 static void change_backlight(void)
 {
-	/*  */
+	if (backlight_state >= BACKLIGHT_MAX_STATE)
+		backlight_state =  BACKLIGHT_MIN_STATE;
+	else
+		backlight_state += 1;
+
+	set_backlight(backlight_state);
 }
 
 void usb_hid_keyboard_led_state(uint8_t led_state)
 {
-	caps_lock_on = led_state & HID_REPORT_LED_CAPS_LOCK;
-	scroll_lock_on = led_state & HID_REPORT_LED_SCROLL_LOCK;
-	set_backlight(color_normal, color_on);
+	caps_lock_on = (led_state & HID_REPORT_LED_CAPS_LOCK) ? 1:0;
+	scroll_lock_on = (led_state & HID_REPORT_LED_SCROLL_LOCK) ? 1:0;
+	set_backlight(backlight_state);
 }
 
 /* to be implemented by user */
@@ -140,7 +163,7 @@ void keymatrix_down(int key)
 		if (key == MATRIX_esc)
 		{
 			fn_lock = !fn_lock;
-			set_backlight(color_normal, color_on);
+			set_backlight(backlight_state);
 			return;
 		}
 		else if (key == MATRIX_space)

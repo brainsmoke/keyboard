@@ -19,6 +19,9 @@
 
 #define REPORT_MAX_KEY (0x52)
 
+/* uncomment for thinkpad layout */
+//#define SWAP_CONTROL_AND_FN (1)
+
 #include "hid_keydef.h"
  
 #define FN_ALTERNATIVES(X) \

@@ -86,8 +86,6 @@ static uint8_t fn_lock = 0;
 static uint8_t caps_lock_on = 0;
 static uint8_t scroll_lock_on = 0;
 
-
-
 static void set_backlight(uint8_t state)
 {
 	uint8_t normal = color_table[state].normal,
@@ -107,7 +105,7 @@ static void init(void)
 	rcc_periph_clock_enable(RCC_GPIOA);
 	rcc_periph_clock_enable(RCC_GPIOB);
 	rcc_periph_clock_enable(RCC_GPIOC);
- 
+
 	usb_hid_keyboard_init(extra_keys, sizeof(extra_keys)/sizeof(extra_keys[0]));
 
 	millis_timer_init();
@@ -115,20 +113,6 @@ static void init(void)
 	init_leds();
 	set_backlight(backlight_state);
 	keymatrix_init();
-}
-
-static uint16_t t0=0;
-static void time_poll(void)
-{
-/*
-	uint16_t t = millis_u16();
-	if ( (uint16_t)(t-t0) > 1000/FPS)
-	{
-		write_frame(fb);
-		memset(fb, brightness++, sizeof(fb));
-		t0 = t;
-	}
-*/
 }
 
 static void change_backlight(void)
@@ -207,7 +191,6 @@ int main(void)
 
 	for(;;)
 	{
-		time_poll();
 		keymatrix_poll(millis());
 		usb_hid_keyboard_poll();
 	}

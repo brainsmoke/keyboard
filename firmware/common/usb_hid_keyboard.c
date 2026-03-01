@@ -33,6 +33,7 @@
 #include "config.h"
 #include "usb_hid_keyboard.h"
 #include "hid_keydef.h"
+#include "millis.h"
 
 #ifndef ID_VENDOR
 #define ID_VENDOR  (0x4242)
@@ -90,8 +91,9 @@ static uint8_t control[128];
 static uint8_t out_report[OUT_REPORT_LED_STATE_SIZE];
 static uint8_t out_report_changed;
 
-static uint8_t idle_rate_4ms;
 static uint8_t current_protocol;
+static uint8_t idle_rate_4ms;
+static volatile uint16_t last_report_ms;
 
 static uint32_t extra_keymap[HID_KEYBOARD_MAX_EXTRA_KEYS];
 
@@ -433,6 +435,9 @@ static enum usbd_request_return_codes hid_control_callback(usbd_device *dev,
 		{
 			if ( (req->wValue & 0xff) == 0)
 			{
+				if (idle_rate_4ms == 0)
+					last_report_ms = millis_u16();
+
 				idle_rate_4ms = (req->wValue >> 8);
 				return USBD_REQ_HANDLED;
 			}
@@ -464,45 +469,6 @@ static void hid_set_config(usbd_device *dev, uint16_t wValue)
 	                               USB_REQ_TYPE_INTERFACE,
 	                               USB_REQ_TYPE_RECIPIENT,
 	                               hid_control_callback);
-}
-
-int usb_hid_keyboard_init(const uint32_t extra_keys[], size_t n_extra_keys)
-{
-	memset(report, 0, sizeof(report));
-	memset(out_report, 0, sizeof(out_report));
-	out_report_changed = 0;
-	idle_rate_4ms = 0;
-	current_protocol = USB_HID_PROTOCOL_REPORT;
-	usb_ready = 0;
-	need_update = 1;
-
-	if (n_extra_keys > HID_KEYBOARD_MAX_EXTRA_KEYS)
-		return 0;
-
-	size_t i, j=0;
-	for (i=0; i<n_extra_keys; i++)
-		if (extra_keys[i] != KEY_NONE)
-			extra_keymap[j++] = extra_keys[i];
-	n_extra_keys = j;
-
-	size_t len = create_hid_keyboard_descriptor(report_descriptor, sizeof(report_descriptor),
-		                                        extra_keymap, n_extra_keys);
-
-	if (len == 0)
-		return 0;
-
-	usb_hid_desciptor.wDescriptorLength = len;
-
-	endpoint_desc.wMaxPacketSize = REPORT_SIZE(n_extra_keys);
-	extra_keys_bits = n_extra_keys;
-
-	device = usbd_init(&st_usbfs_v2_usb_driver, &device_desc, &config_desc,
-	                   string_descriptors, N_STRING_DESCRIPTORS,
-	                   control, sizeof(control));
-
-	usbd_register_set_config_callback(device, hid_set_config);
-
-	return 1;
 }
 
 #define ARRAY_NO_KEY         (0)
@@ -618,6 +584,15 @@ void usb_hid_keyboard_clear_modifiers(void)
 
 void usb_hid_keyboard_poll(void)
 {
+	uint16_t now = 0;
+
+	if ( idle_rate_4ms > 0 )
+	{
+		now = millis_u16();
+		if ( (uint16_t)(now-last_report_ms) >= (idle_rate_4ms<<2) )
+			need_update = 1;
+	}
+
 	if (usb_ready && need_update)
 	{
 		need_update = 0;
@@ -629,6 +604,8 @@ void usb_hid_keyboard_poll(void)
 		if ( usbd_ep_write_packet(device, endpoint_desc.bEndpointAddress, report,
 		                          report_size) != report_size )
 			need_update = 1;
+		else
+			last_report_ms = now;
 	}
 
 	usbd_poll(device);
@@ -638,5 +615,46 @@ void usb_hid_keyboard_poll(void)
 		out_report_changed = 0;
 		usb_hid_keyboard_led_state(out_report[OUT_REPORT_LED_STATE_OFFSET]);
 	}
+}
+
+int usb_hid_keyboard_init(const uint32_t extra_keys[], size_t n_extra_keys)
+{
+	memset(report, 0, sizeof(report));
+	memset(out_report, 0, sizeof(out_report));
+	out_report_changed = 0;
+	idle_rate_4ms = 0;
+	current_protocol = USB_HID_PROTOCOL_REPORT;
+	usb_ready = 0;
+	need_update = 1;
+
+	if (n_extra_keys > HID_KEYBOARD_MAX_EXTRA_KEYS)
+		return 0;
+
+	size_t i, j=0;
+	for (i=0; i<n_extra_keys; i++)
+		if (extra_keys[i] != KEY_NONE)
+			extra_keymap[j++] = extra_keys[i];
+	n_extra_keys = j;
+
+	size_t len = create_hid_keyboard_descriptor(report_descriptor, sizeof(report_descriptor),
+		                                        extra_keymap, n_extra_keys);
+
+	if (len == 0)
+		return 0;
+
+	usb_hid_desciptor.wDescriptorLength = len;
+
+	endpoint_desc.wMaxPacketSize = REPORT_SIZE(n_extra_keys);
+	extra_keys_bits = n_extra_keys;
+
+	device = usbd_init(&st_usbfs_v2_usb_driver, &device_desc, &config_desc,
+	                   string_descriptors, N_STRING_DESCRIPTORS,
+	                   control, sizeof(control));
+
+	usbd_register_set_config_callback(device, hid_set_config);
+
+	millis_timer_init();
+
+	return 1;
 }
 

@@ -546,13 +546,16 @@ void usb_hid_keyboard_key_up(uint32_t hid_key)
 	if (ix < 0)
 		return;
 
-	report[ix>>3] &=~ (1<<(ix&0x7));
+	else if ( report[ix>>3] & (1<<(ix&0x7)) )
+	{
+		report[ix>>3] &=~ (1<<(ix&0x7));
 
-	if ( (hid_key >= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MIN_KEY)) &&
-	     (hid_key <= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MAX_KEY)) )
-		report_array_del_key(hid_key & 0xff);
+		if ( (hid_key >= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MIN_KEY)) &&
+		     (hid_key <= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MAX_KEY)) )
+			report_array_del_key(hid_key & 0xff);
 
-	need_update = 1;
+		need_update = 1;
+	}
 }
 
 void usb_hid_keyboard_key_down(uint32_t hid_key)
@@ -572,8 +575,10 @@ void usb_hid_keyboard_key_down(uint32_t hid_key)
 
 void usb_hid_keyboard_clear_keys(void)
 {
+	if (report[REPORT_ARRAY_OFFSET] != 0)
+		need_update = 1;
+
 	memset(&report[1], 0, sizeof(report)-sizeof(report[0]));
-	need_update = 1;
 }
 
 void usb_hid_keyboard_clear_modifiers(void)

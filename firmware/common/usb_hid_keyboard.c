@@ -332,7 +332,7 @@ static const struct usb_interface_descriptor interface_desc =
 	.extralen           = sizeof(usb_hid_desciptor),
 };
 
-const struct usb_interface interfaces[] =
+static const struct usb_interface interfaces[] =
 {
 	{
 		.num_altsetting = 1,

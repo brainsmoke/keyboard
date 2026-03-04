@@ -47,7 +47,7 @@
 static uint8_t fb[N_LEDS];
 
 #define HID_CODES(a,b) (b),
-static uint32_t extra_keys[] = { FN_ALTERNATIVES(HID_CODES) };
+static const uint32_t extra_keys[] = { FN_ALTERNATIVES(HID_CODES) };
 #undef HID_CODES
 
 #define BACKLIGHT_MIN_STATE (0)
@@ -66,7 +66,7 @@ static const struct
 
 static uint8_t backlight_state = BACKLIGHT_MIN_STATE;
 
-static uint32_t alt_keymap[KEYMATRIX_N_KEYS] =
+static const uint32_t alt_keymap[KEYMATRIX_N_KEYS] =
 {
 #define MAPPING(a,b) [a] = b,
 	FN_ALTERNATIVES(MAPPING)

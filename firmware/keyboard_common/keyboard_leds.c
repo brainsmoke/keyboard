@@ -137,7 +137,7 @@ void SysTick_Handler(void)
 		iter = 0;
 }
 
-static uint16_t gamma_map[256] = {
+static const uint16_t gamma_map[256] = {
 /*
 max_val=0xffff
 gamma=2.6

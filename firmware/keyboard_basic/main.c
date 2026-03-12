@@ -31,8 +31,6 @@
 #include <libopencmsis/core_cm3.h>
 
 #include <libopencm3/stm32/rcc.h>
-#include <libopencm3/stm32/gpio.h>
-#include <libopencm3/stm32/usart.h>
 
 #include "config.h"
 #include "util.h"

@@ -2,7 +2,7 @@
 #define USB_HID_KEYBOARD_H
 
 /*
- * Copyright (c) 2023-2025 Erik Bosman <erik@minemu.org>
+ * Copyright (c) 2023-2026 Erik Bosman <erik@minemu.org>
  *
  * Permission  is  hereby  granted,  free  of  charge,  to  any  person
  * obtaining  a copy  of  this  software  and  associated documentation
@@ -36,6 +36,7 @@
 int usb_hid_keyboard_init(const uint32_t extra_keys[], size_t n_extra_keys);
 void usb_hid_keyboard_key_up(uint32_t hid_key);
 void usb_hid_keyboard_key_down(uint32_t hid_key);
+int  usb_hid_keyboard_key_is_down(uint32_t hid_key);
 void usb_hid_keyboard_clear_keys(void);
 void usb_hid_keyboard_clear_modifiers(void);
 void usb_hid_keyboard_poll(void);

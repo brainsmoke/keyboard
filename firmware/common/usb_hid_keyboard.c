@@ -546,7 +546,7 @@ void usb_hid_keyboard_key_up(uint32_t hid_key)
 	if (ix < 0)
 		return;
 
-	else if ( report[ix>>3] & (1<<(ix&0x7)) )
+	if ( report[ix>>3] & (1<<(ix&0x7)) )
 	{
 		report[ix>>3] &=~ (1<<(ix&0x7));
 
@@ -564,13 +564,28 @@ void usb_hid_keyboard_key_down(uint32_t hid_key)
 	if (ix < 0)
 		return;
 
-	report[ix>>3] |= 1<<(ix&0x7);
+	if ( ~report[ix>>3] & (1<<(ix&0x7)) )
+	{
 
-	if ( (hid_key >= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MIN_KEY)) &&
-	     (hid_key <= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MAX_KEY)) )
-		report_array_add_key(hid_key & 0xff);
+		report[ix>>3] |= 1<<(ix&0x7);
 
-	need_update = 1;
+		if ( (hid_key >= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MIN_KEY)) &&
+		     (hid_key <= HID_KEY(HID_KEYBOARD_PAGE, REPORT_MAX_KEY)) )
+			report_array_add_key(hid_key & 0xff);
+
+		need_update = 1;
+	}
+}
+
+int usb_hid_keyboard_key_is_down(uint32_t hid_key)
+{
+	int ix = get_index(hid_key);
+	if (ix < 0)
+		return 0;
+	else if ( report[ix>>3] & (1<<(ix&0x7)) )
+		return 1;
+	else
+		return 0;
 }
 
 void usb_hid_keyboard_clear_keys(void)

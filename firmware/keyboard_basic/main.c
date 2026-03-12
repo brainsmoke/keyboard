@@ -97,22 +97,6 @@ static void set_backlight(uint8_t state)
 	write_frame(fb);
 }
 
-static void init(void)
-{
-	rcc_clock_setup_in_hsi_out_48mhz();
-	rcc_periph_clock_enable(RCC_GPIOA);
-	rcc_periph_clock_enable(RCC_GPIOB);
-	rcc_periph_clock_enable(RCC_GPIOC);
-
-	usb_hid_keyboard_init(extra_keys, sizeof(extra_keys)/sizeof(extra_keys[0]));
-
-	millis_timer_init();
-
-	init_leds();
-	set_backlight(backlight_state);
-	keymatrix_init();
-}
-
 static void change_backlight(void)
 {
 	if (backlight_state >= BACKLIGHT_MAX_STATE)
@@ -123,6 +107,7 @@ static void change_backlight(void)
 	set_backlight(backlight_state);
 }
 
+/* callback: defined in usb_hid_keyboard.h */
 void usb_hid_keyboard_led_state(uint8_t led_state)
 {
 	caps_lock_on = (led_state & HID_REPORT_LED_CAPS_LOCK) ? 1:0;
@@ -130,7 +115,7 @@ void usb_hid_keyboard_led_state(uint8_t led_state)
 	set_backlight(backlight_state);
 }
 
-/* to be implemented by user */
+/* callback: defined in keymatrix.h */
 void keymatrix_down(int key)
 {
 	if (key == MATRIX_fn)
@@ -165,6 +150,7 @@ void keymatrix_down(int key)
 		usb_hid_keyboard_key_down( hid_key );
 }
 
+/* callback: defined in keymatrix.h */
 void keymatrix_up(int key)
 {
 	if (key == MATRIX_fn)
@@ -181,6 +167,22 @@ void keymatrix_up(int key)
 	hid_key = alt_keymap[key];
 	if (hid_key != KEY_NONE)
 		usb_hid_keyboard_key_up(hid_key);
+}
+
+static void init(void)
+{
+	rcc_clock_setup_in_hsi_out_48mhz();
+	rcc_periph_clock_enable(RCC_GPIOA);
+	rcc_periph_clock_enable(RCC_GPIOB);
+	rcc_periph_clock_enable(RCC_GPIOC);
+
+	usb_hid_keyboard_init(extra_keys, sizeof(extra_keys)/sizeof(extra_keys[0]));
+
+	millis_timer_init();
+
+	init_leds();
+	set_backlight(backlight_state);
+	keymatrix_init();
 }
 
 int main(void)

@@ -160,11 +160,12 @@ def get_LEDs_schematic(conf):
     return s
 
 
-conf = get_configuration()
+if __name__ == '__main__':
+    conf = get_configuration()
 
-if sys.argv[1] == 'schematic':
-    s = get_keys_schematic(conf)
-    print(s)
-if sys.argv[1] == 'leds':
-    s = get_LEDs_schematic(conf)
-    print(s)
+    if sys.argv[1] == 'schematic':
+        s = get_keys_schematic(conf)
+        print(s)
+    if sys.argv[1] == 'leds':
+        s = get_LEDs_schematic(conf)
+        print(s)

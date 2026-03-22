@@ -22,7 +22,7 @@ edges_origin = 23.225, 23.113
 board_offset = 25.4, 25.4
 
 diode_path = rect_path( (4.3, -2.2), (5,2) )
-switch_path = rect_path( (0,0), (16,16) )
+switch_path = rect_path( (0,0), (17,17) )
 LED_path = rect_path( (0,-5.08), (5.08,2.54) )
 mid_hole_path = rect_path( (0,0), (4.5,4.5) )
 side_holes_path = rect_path( (0,0), (10.16+2, 2) )

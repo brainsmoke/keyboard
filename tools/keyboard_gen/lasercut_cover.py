@@ -18,7 +18,7 @@ def vec_sum( *v ):
 
 u=19.05
 
-edges_origin = 23.225, 23.113
+edges_origin = 23.113, 23.225
 board_offset = 25.4, 25.4
 
 diode_path = rect_path( (4.3, -2.2), (5,2) )

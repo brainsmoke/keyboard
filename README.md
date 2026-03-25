@@ -4,3 +4,5 @@
 
 ![Image of a keyboard PCB](img/v0.1.jpg)
 
+TODO: find keycaps which look good with AND without backlight
+

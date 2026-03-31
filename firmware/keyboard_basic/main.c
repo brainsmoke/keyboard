@@ -58,8 +58,8 @@ static const struct
 } color_table[BACKLIGHT_MAX_STATE+1] = 
 {
 	{0x00, 0xff},
-	{0x1f, 0xff},
 	{0x3f, 0xff},
+	{0x7f, 0xff},
 };
 
 static uint8_t backlight_state = BACKLIGHT_MIN_STATE;

@@ -7941,6 +7941,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 201.61 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1984997b-c86d-46d7-9f0c-1e90ab0dd7b4")
 		)
@@ -7963,7 +7972,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "04992d84-2d3e-43b0-a0dd-db0f3dccad6d")
 		(property "Reference" "SW38"
@@ -8031,7 +8040,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "06357c34-f2be-4418-a49c-28fda035bc59")
 		(property "Reference" "SW11"
@@ -8099,7 +8108,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "068e584d-fdc1-47bb-b39d-a9a94707cf91")
 		(property "Reference" "SW67"
@@ -8167,7 +8176,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0b871f11-4191-4190-bf8f-0fc2f0d4d53a")
 		(property "Reference" "SW30"
@@ -8281,6 +8290,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 168.28 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d60668fe-5027-4cdd-b3b2-2be646160cd4")
 		)
@@ -8349,6 +8367,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 134.94 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5ce7ba86-21e1-47b9-b8a1-0210bce0e99c")
 		)
@@ -8371,7 +8398,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0d2d928e-112e-4290-9e27-aea8d5dd35a8")
 		(property "Reference" "SW74"
@@ -8439,7 +8466,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0d430f64-f671-475a-bf14-4c8210669759")
 		(property "Reference" "SW61"
@@ -8507,7 +8534,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0dabd15d-49fd-456e-ac50-921f23179a2f")
 		(property "Reference" "SW19"
@@ -8621,6 +8648,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 296.86 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f31ba3a3-69cd-4c45-96ca-8bb866b65ad0")
 		)
@@ -8681,6 +8717,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 156.37 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 156.37 144.15 0)
 			(effects
 				(font
@@ -8757,6 +8802,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 101.6 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2e9e9eea-064e-4fc9-8c98-8ad3e512ad54")
 		)
@@ -8779,7 +8833,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "12f204a7-80ab-44d3-b41d-1b9e2c6a53c5")
 		(property "Reference" "SW80"
@@ -8893,6 +8947,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 349.25 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "438b8328-3976-4561-96ec-675e5cf0462b")
 		)
@@ -8915,7 +8978,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "154b609e-a0c6-4f19-a424-edecdce7aa6d")
 		(property "Reference" "SW64"
@@ -8983,7 +9046,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1b403698-533f-4f35-bbaf-d69b3cadf986")
 		(property "Reference" "SW24"
@@ -9051,7 +9114,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1e05a4d8-7c2e-4de8-9f1f-89765f93dca9")
 		(property "Reference" "SW12"
@@ -9165,6 +9228,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 249.24 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1a236203-ef1d-4bf3-9c71-3da457cd4273")
 		)
@@ -9225,6 +9297,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 139.7 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 139.7 87 0)
 			(effects
 				(font
@@ -9301,6 +9382,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 289.72 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7576a149-6951-4f3c-8b06-2f3618168431")
 		)
@@ -9323,7 +9413,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "21cb9bd7-97de-4d3e-b8c9-7adec404e5b5")
 		(property "Reference" "SW62"
@@ -9437,6 +9527,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 220.66 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "60d0deba-8b1f-4fed-9352-a71b74980b74")
 		)
@@ -9459,7 +9558,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2883c1ca-0813-4c60-8550-158f1443bb60")
 		(property "Reference" "SW2"
@@ -9527,7 +9626,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "28d237e3-8d5e-4664-b953-7a676e8328f5")
 		(property "Reference" "SW8"
@@ -9641,6 +9740,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 273.05 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4b21e8f8-9fc7-437c-9985-0546cc62a3f7")
 		)
@@ -9663,7 +9771,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2b4e45e0-d959-4aad-933e-52332b2aaef9")
 		(property "Reference" "SW78"
@@ -9777,6 +9885,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 258.76 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4d6d7b6e-f90e-4d42-83f9-567208f2d3d2")
 		)
@@ -9845,6 +9962,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 163.51 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "708215da-2d38-4028-9760-23c4a57d14c7")
 		)
@@ -9867,7 +9993,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2f691777-e9d5-40a5-9346-2dce46867625")
 		(property "Reference" "SW33"
@@ -9935,7 +10061,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2f6cdac2-8599-44d0-be54-3dd161ab2237")
 		(property "Reference" "SW76"
@@ -10049,6 +10175,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 37.31 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "21f76a56-53de-4bbb-87d0-3204cf5c316e")
 		)
@@ -10117,6 +10252,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 63.5 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "83217a6c-851e-41f7-bf59-1f850e01c70a")
 		)
@@ -10139,7 +10283,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "335fba1b-61ef-423b-a5cc-4d9fe3a04c4a")
 		(property "Reference" "SW65"
@@ -10207,7 +10351,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "371ffff9-a409-4dd3-b316-c62e76d9709c")
 		(property "Reference" "SW16"
@@ -10275,7 +10419,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "37eecf5a-332c-4be3-99bc-70588075dc18")
 		(property "Reference" "SW53"
@@ -10389,6 +10533,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 368.3 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "aaa4d476-4915-4fc8-a83e-f0b91630eb92")
 		)
@@ -10449,6 +10602,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 149.22 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 149.22 67.94 0)
 			(effects
 				(font
@@ -10525,6 +10687,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 211.14 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "12007d9c-28db-4e26-bf6b-3088b3005f30")
 		)
@@ -10547,7 +10718,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3d012af6-84af-4098-a14e-5b9dc6e82839")
 		(property "Reference" "SW50"
@@ -10661,6 +10832,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 96.84 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ab6aadd8-5883-44e9-b5ce-b501db04a9e6")
 		)
@@ -10721,6 +10901,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 196.85 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 196.85 42.54 0)
 			(effects
 				(font
@@ -10797,6 +10986,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 130.18 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b85b9ff0-0ba4-42bc-9676-7beef33abee0")
 		)
@@ -10819,7 +11017,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "42482325-8b26-43e8-bfc0-dd8a77a8ebd8")
 		(property "Reference" "SW29"
@@ -10887,7 +11085,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4399fd9d-f757-4a6d-a884-c87f5b77c859")
 		(property "Reference" "SW13"
@@ -11001,6 +11199,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 87.31 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2601253a-fa0c-4c91-8f1e-4043087873bc")
 		)
@@ -11069,6 +11276,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 158.75 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8a745afa-31f9-4bb1-a8c3-780c87724664")
 		)
@@ -11091,7 +11307,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "471c21b5-79d4-49d5-a53a-a61603d7b331")
 		(property "Reference" "SW55"
@@ -11205,6 +11421,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 282.57 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5bae5759-ed86-442c-a08a-1959aac9032d")
 		)
@@ -11227,7 +11452,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4b706626-2222-4dca-b8fc-bf4b1c056dc3")
 		(property "Reference" "SW87"
@@ -11341,6 +11566,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 187.33 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ffeeb461-9574-45ed-a2d2-d6797731fe5a")
 		)
@@ -11401,6 +11635,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 82.55 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 82.55 87 0)
 			(effects
 				(font
@@ -11477,6 +11720,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 92.07 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f186ce2d-4758-456c-8a2d-493781f32b23")
 		)
@@ -11545,6 +11797,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 368.3 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "45b785a2-f696-4135-a0a3-26718f992c35")
 		)
@@ -11567,7 +11828,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5453e159-a36d-47c7-bc38-a9ceb792f4e2")
 		(property "Reference" "SW4"
@@ -11681,6 +11942,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 130.18 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5d0d133b-1d49-42dc-9b66-400ce6b8bd78")
 		)
@@ -11703,7 +11973,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5590b7af-0b4d-4955-bb63-d054b1e4c2c5")
 		(property "Reference" "SW21"
@@ -11771,7 +12041,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "56f8ce04-7d18-4fa9-8e83-216231733d86")
 		(property "Reference" "SW14"
@@ -11839,7 +12109,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "59d4d2e1-ab3a-4374-afed-d7d72b2d9f48")
 		(property "Reference" "SW28"
@@ -11953,6 +12223,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 111.12 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5f1cf37f-7d4a-4428-8a8c-f3318babafde")
 		)
@@ -12021,6 +12300,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 244.48 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9ff24630-1caf-4370-8eaf-7853b22e9de2")
 		)
@@ -12043,7 +12331,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5afc0092-34fe-4817-8dfc-8da5a61272bf")
 		(property "Reference" "SW15"
@@ -12157,6 +12445,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 92.07 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "29054713-0a79-4811-bb9a-2e903a0dbbfe")
 		)
@@ -12217,6 +12514,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 275.43 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 275.43 144.15 0)
 			(effects
 				(font
@@ -12293,6 +12599,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 53.98 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "77e52e8e-0c68-4f58-bfc9-870b3cc0ec89")
 		)
@@ -12315,7 +12630,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5d41e7a0-0ea1-48a4-bb4b-7b631a74db2a")
 		(property "Reference" "SW63"
@@ -12383,7 +12698,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "61306246-24b2-40bc-b52d-7ec7f1af2314")
 		(property "Reference" "SW44"
@@ -12451,7 +12766,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6269bc4d-31af-468e-b387-c0beebbd925b")
 		(property "Reference" "SW57"
@@ -12519,7 +12834,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "63f69c61-b97d-4c8d-a831-de2bdd083cbf")
 		(property "Reference" "SW37"
@@ -12633,6 +12948,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 239.71 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "781a709c-d8b9-4e97-b8cd-34705f9e5451")
 		)
@@ -12655,7 +12979,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "67921947-1692-4b32-b440-dc93fee1542c")
 		(property "Reference" "SW82"
@@ -12723,7 +13047,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6a5c34ea-e483-4f00-92ed-40e48b311aaa")
 		(property "Reference" "SW47"
@@ -12791,7 +13115,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6ab6cec6-5ded-4c49-b163-36b03242ecd3")
 		(property "Reference" "SW5"
@@ -12905,6 +13229,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 368.3 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "26898c8e-511d-4499-a421-7ee8c9d93d42")
 		)
@@ -12973,6 +13306,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 61.12 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "aaacdb28-9d4b-44b1-9f40-ddf98c777d31")
 		)
@@ -12995,7 +13337,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6e78f654-2cf8-44bc-9719-92b545ec1cfd")
 		(property "Reference" "SW85"
@@ -13063,7 +13405,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6e8ac915-69f4-45b1-9df6-0c5ecdd8f4c4")
 		(property "Reference" "SW25"
@@ -13177,6 +13519,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 196.85 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "44526538-ede0-4460-894d-4e388344a871")
 		)
@@ -13199,7 +13550,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "75d1bef3-9dc1-416f-9b83-8515788bcda4")
 		(property "Reference" "SW77"
@@ -13313,6 +13664,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 68.26 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c95df463-cba8-4b31-99d3-123ab53698e7")
 		)
@@ -13335,7 +13695,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "76172a79-2dbf-46d8-84e8-45eff952f087")
 		(property "Reference" "SW23"
@@ -13403,7 +13763,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7651920f-9e42-4d81-8a9c-bd4b3618a291")
 		(property "Reference" "SW9"
@@ -13517,6 +13877,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 263.52 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "151d3208-87a0-4afe-89ae-19b686a27b7a")
 		)
@@ -13539,7 +13908,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7d041e62-516b-4a5d-8aaf-c29dc6fcacf2")
 		(property "Reference" "SW81"
@@ -13653,6 +14022,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 34.92 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6587e624-6c6e-448b-84ef-60709c94017a")
 		)
@@ -13713,6 +14091,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 84.93 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 84.93 144.15 0)
 			(effects
 				(font
@@ -13789,6 +14176,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 301.62 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d8483c12-4b6b-406b-8016-cb5c4ad2019b")
 		)
@@ -13857,6 +14253,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 215.9 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8bb4876f-3216-4690-8481-6c2a30e2db8d")
 		)
@@ -13879,7 +14284,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "83b9fbb8-cd81-4f3a-96d8-c58bb95fd5e8")
 		(property "Reference" "SW59"
@@ -13947,7 +14352,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "83bf367d-0315-42c7-b819-630f672eaa0d")
 		(property "Reference" "SW73"
@@ -14061,6 +14466,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 177.8 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cb096a0a-2bda-4c5c-a11d-0e03dab6a6ea")
 		)
@@ -14129,6 +14543,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 349.25 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ff04c93d-c6f0-4ce6-8c4f-73abdc3f630a")
 		)
@@ -14151,7 +14574,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "847d340c-7b71-432e-9bd0-83c7bacc47d3")
 		(property "Reference" "SW36"
@@ -14265,6 +14688,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 330.2 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d3d1048a-ffed-4730-b3dc-55e9563cb98d")
 		)
@@ -14287,7 +14719,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "892e9b43-1b3f-449e-8163-e359c9390caf")
 		(property "Reference" "SW84"
@@ -14401,6 +14833,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 120.65 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9863f9f6-9e7e-4b90-960f-c025f4519547")
 		)
@@ -14461,6 +14902,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 106.36 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 106.36 106.04 0)
 			(effects
 				(font
@@ -14537,6 +14987,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 349.25 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0d0e1fad-4ed2-48a2-ab33-6a1a89b62626")
 		)
@@ -14559,7 +15018,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "91c47869-8c86-4582-8d68-1f467acd1f1d")
 		(property "Reference" "SW48"
@@ -14627,7 +15086,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "920af2e0-9630-4a2a-aa6c-30fc384425e1")
 		(property "Reference" "SW70"
@@ -14695,7 +15154,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "949b8ee9-d424-4aab-ab4e-96a6cae84882")
 		(property "Reference" "SW1"
@@ -14763,7 +15222,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "94deddf4-35e6-419d-8a41-babcabfcc45c")
 		(property "Reference" "SW42"
@@ -14831,7 +15290,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "95c22553-ac4d-46e0-bcae-b31d1202ee8f")
 		(property "Reference" "SW52"
@@ -14945,6 +15404,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 292.1 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e9d3ed98-6974-4de8-a9d8-9628cca41d0e")
 		)
@@ -14967,7 +15435,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9a9b0e3c-8871-4345-a91c-4e80bd9184a6")
 		(property "Reference" "SW31"
@@ -15081,6 +15549,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 330.2 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bf797b19-53bb-4093-a143-64c208b346ce")
 		)
@@ -15103,7 +15580,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9c739ed3-1f6f-4f99-98cc-38a1cfec8010")
 		(property "Reference" "SW34"
@@ -15171,7 +15648,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9c988d88-51eb-4200-9501-dc62a91aee95")
 		(property "Reference" "SW45"
@@ -15239,7 +15716,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9f9a1e91-f9b4-4130-a703-ba26da3a192a")
 		(property "Reference" "SW54"
@@ -15353,6 +15830,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 227.81 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "59deee6d-3658-4836-87f1-c44fd294bcaf")
 		)
@@ -15421,6 +15907,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 284.96 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "601d655c-74b8-4cfb-a8c0-3b8727b65e47")
 		)
@@ -15443,7 +15938,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a42bca89-9e14-446e-a40a-50ac42dca74b")
 		(property "Reference" "SW75"
@@ -15557,6 +16052,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 330.2 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "86158e22-a13c-4653-bb34-87eaff33be7a")
 		)
@@ -15617,6 +16121,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 125.41 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 125.41 106.04 0)
 			(effects
 				(font
@@ -15693,6 +16206,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 206.38 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cf61d774-b686-441b-b417-49e6cd8e3b81")
 		)
@@ -15753,6 +16275,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 42.07 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 42.07 106.04 0)
 			(effects
 				(font
@@ -15829,6 +16360,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 234.95 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bdc5f79e-8e0b-41c3-a94a-b2fa8439a2b3")
 		)
@@ -15851,7 +16391,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ad5709ba-4d67-47e1-b0f9-1ca10e53812f")
 		(property "Reference" "SW10"
@@ -15919,7 +16459,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "aee7e2be-97de-46e3-8cd3-e3697a50c1f4")
 		(property "Reference" "SW51"
@@ -16033,6 +16573,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 158.75 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "142ec1ce-4e8f-4c7d-b9df-007be47cf4d9")
 		)
@@ -16101,6 +16650,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 230.19 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5f62b926-7d80-4ab3-8a4f-0a74490716a3")
 		)
@@ -16123,7 +16681,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b2113d2d-a56e-48ce-aa92-0977a3ab7de3")
 		(property "Reference" "SW56"
@@ -16191,7 +16749,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b2738454-9077-4c71-af1b-91d0db51028a")
 		(property "Reference" "SW60"
@@ -16259,7 +16817,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b3377f79-c118-40f4-b2b5-59127e1b86ba")
 		(property "Reference" "SW46"
@@ -16373,6 +16931,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 244.48 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ff08a0e5-5195-46b9-8dfe-df2bd3ffc5dc")
 		)
@@ -16441,6 +17008,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 34.92 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "836fea03-5c29-42ed-89c3-b50f39e9409d")
 		)
@@ -16463,7 +17039,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b4adf66a-182e-432b-9c1e-fd5f12a38766")
 		(property "Reference" "SW26"
@@ -16531,7 +17107,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b4eac510-6a34-4e2a-87d1-7ae63b6eed85")
 		(property "Reference" "SW7"
@@ -16599,7 +17175,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b5e4a9c5-992d-483d-8022-8a2f0f56e752")
 		(property "Reference" "SW20"
@@ -16713,6 +17289,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 368.3 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3b18f587-b784-4b67-b70c-99246322ffc1")
 		)
@@ -16773,6 +17358,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 251.62 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 251.62 144.15 0)
 			(effects
 				(font
@@ -16849,6 +17443,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 144.46 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "71d98785-3e23-4bb8-88fe-cb54bb3fec70")
 		)
@@ -16917,6 +17520,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 39.69 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "75cf10a5-e4c8-4eaa-a925-2286355f69ab")
 		)
@@ -16939,7 +17551,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c1c61efd-3ebe-48fb-a6e5-8d9ea734c421")
 		(property "Reference" "SW17"
@@ -17053,6 +17665,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 73.03 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5b2528b2-4c57-4e01-8b75-b199c7a614c8")
 		)
@@ -17075,7 +17696,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c428b4d5-f3a7-43b5-9005-323b89e8437a")
 		(property "Reference" "SW66"
@@ -17189,6 +17810,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 192.09 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bb6b736c-2ec6-4185-8598-35c44f61d34f")
 		)
@@ -17249,6 +17879,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 263.52 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 263.52 67.94 0)
 			(effects
 				(font
@@ -17325,6 +17964,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 177.8 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "07b2b24c-66dc-4fcd-b406-64649b8bdd2b")
 		)
@@ -17347,7 +17995,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "cb32d007-d0f8-4bfe-9e3f-efbbfbb39c04")
 		(property "Reference" "SW86"
@@ -17415,7 +18063,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ccaec283-2849-446b-9708-ee9ccaea6cde")
 		(property "Reference" "SW6"
@@ -17529,6 +18177,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 330.2 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "18e3c30f-cad4-4264-ba78-4b1054acfddd")
 		)
@@ -17551,7 +18208,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "cf27b90c-313e-4786-bda7-48a356f3cafc")
 		(property "Reference" "SW69"
@@ -17665,6 +18322,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 73.03 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2c756150-e5c3-4851-ba33-8cb40a01c174")
 		)
@@ -17687,7 +18353,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d11fd5ea-5fcf-48a2-a0af-5c1a92340e30")
 		(property "Reference" "SW39"
@@ -17755,7 +18421,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d6f38a86-af24-4bfd-b5de-1f4eabc1618b")
 		(property "Reference" "SW40"
@@ -17823,7 +18489,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d731a416-1f49-41aa-8fb2-a0e7ed2da90d")
 		(property "Reference" "SW27"
@@ -17937,6 +18603,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 349.25 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "09ed4776-7cf9-4419-b1fe-3a3fb82a04fe")
 		)
@@ -17959,7 +18634,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "da3eb62e-43eb-447a-b9d5-6ba690a60def")
 		(property "Reference" "SW32"
@@ -18073,6 +18748,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 299.24 144.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "09833883-ab96-4629-9127-af132bacc4e3")
 		)
@@ -18095,7 +18779,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "db1c315e-ed6c-4e76-a228-d526df1aedc6")
 		(property "Reference" "SW72"
@@ -18163,7 +18847,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "db674d90-ac52-45c2-a394-dcd3e0933786")
 		(property "Reference" "SW83"
@@ -18277,6 +18961,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 225.43 67.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "71e061fa-f351-408e-ba60-8f6e599e29e5")
 		)
@@ -18337,6 +19030,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 173.04 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 173.04 125.09 0)
 			(effects
 				(font
@@ -18413,6 +19115,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 182.56 106.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9b4e8c50-9f5c-43f6-be66-d7c1b20e3a18")
 		)
@@ -18435,7 +19146,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "dff5c8e9-841d-4c31-9b51-393da47a867c")
 		(property "Reference" "SW3"
@@ -18503,7 +19214,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e3269183-25d2-4dc2-9975-add1f410fef5")
 		(property "Reference" "SW58"
@@ -18617,6 +19328,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 46.83 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "251354e3-32c0-4720-90f3-1cddafd49e9c")
 		)
@@ -18677,6 +19397,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 215.9 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 215.9 87 0)
 			(effects
 				(font
@@ -18753,6 +19482,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 111.12 42.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ee8fec19-7f36-4018-922f-a24d2e3c59d6")
 		)
@@ -18775,7 +19513,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e9980035-3429-417f-b695-cb0c736fe329")
 		(property "Reference" "SW22"
@@ -18843,7 +19581,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "eaa3430f-1680-4244-82ad-2b9c32d8d8b5")
 		(property "Reference" "SW43"
@@ -18911,7 +19649,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ebcc4869-d648-46e3-9748-715a70d1f6e7")
 		(property "Reference" "SW68"
@@ -18979,7 +19717,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "eddb3e01-8438-489d-b8d2-cfbf6266f654")
 		(property "Reference" "SW49"
@@ -19047,7 +19785,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ee9af596-f7d1-4f6c-9077-23a25e77a7f7")
 		(property "Reference" "SW18"
@@ -19161,6 +19899,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 115.89 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "85010413-0915-4a77-aa48-ad56ec3316e4")
 		)
@@ -19221,6 +19968,15 @@
 			)
 		)
 		(property "Description" "Schottky diode"
+			(at 77.79 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81598"
 			(at 77.79 125.09 0)
 			(effects
 				(font
@@ -19297,6 +20053,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 254 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "047d24bf-b02f-42af-a066-b5653b2f21e0")
 		)
@@ -19319,7 +20084,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f776d859-e47c-4716-a083-8df71f4afe0d")
 		(property "Reference" "SW35"
@@ -19433,6 +20198,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 349.25 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "02dccbec-a8be-4be5-b8d2-ac076a4ac70d")
 		)
@@ -19455,7 +20229,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f95f248e-2745-41fd-8986-2c81df571222")
 		(property "Reference" "SW41"
@@ -19569,6 +20343,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C81598"
+			(at 153.99 125.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "71031f90-fc83-41bf-86cf-6e8c07e7da59")
 		)
@@ -19591,7 +20374,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fd18d88f-2714-45e4-bb6d-97d68b803a17")
 		(property "Reference" "SW79"
@@ -19659,7 +20442,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ff282f0b-c815-4ad5-bc49-3d3ea5174ccd")
 		(property "Reference" "SW71"

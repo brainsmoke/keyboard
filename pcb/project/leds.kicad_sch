@@ -12677,7 +12677,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 337.185 180.34 0)
 			(effects
 				(font
@@ -12711,6 +12711,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 336.55 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "69c76dcb-1a04-4f41-b80c-f2b96b3bb0d6")
 		)
@@ -12733,7 +12742,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "03ba161f-322c-46fa-9f8b-6eb096095de4")
 		(property "Reference" "LED48"
@@ -12845,6 +12854,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 665.48 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8e1ca4e1-1208-4df2-88d6-bac38fa2a317")
 		)
@@ -12867,7 +12885,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0496e3c4-2992-4523-89de-9085a0fe9021")
 		(property "Reference" "LED19"
@@ -12935,7 +12953,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "06d66144-ab10-4bb6-844b-ff87caa756ff")
 		(property "Reference" "LED4"
@@ -13003,7 +13021,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "09223397-73c3-48e0-9604-0401942d0e09")
 		(property "Reference" "LED41"
@@ -13071,7 +13089,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0b08bf56-05e6-47d3-9754-dd001db19bee")
 		(property "Reference" "LED23"
@@ -13149,7 +13167,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 464.185 180.34 0)
 			(effects
 				(font
@@ -13181,6 +13199,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 463.55 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13253,6 +13280,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 114.3 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3961f806-f06b-44bb-b00b-bd4b2cb38d67")
 		)
@@ -13317,7 +13353,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0fe40313-e3b2-4450-afd3-6c08e97f98ad")
 		(property "Reference" "LED27"
@@ -13385,7 +13421,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "16124383-3b4b-475d-b955-eafd498f9e36")
 		(property "Reference" "LED14"
@@ -13453,7 +13489,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "170353a6-0c96-40b9-8c64-c6c02ece6701")
 		(property "Reference" "LED60"
@@ -13521,7 +13557,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "17619765-e772-4322-9ceb-dd6d80fd8b08")
 		(property "Reference" "LED5"
@@ -13589,7 +13625,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "181d76e4-5b03-4244-94ec-96d5b86d2020")
 		(property "Reference" "LED42"
@@ -13657,7 +13693,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1921ffdc-8437-4fb8-bb9e-73ee0e7a993e")
 		(property "Reference" "LED71"
@@ -13725,7 +13761,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1c1b6d32-b460-4e24-8935-f1701c03091d")
 		(property "Reference" "LED58"
@@ -13793,7 +13829,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "21cbeaa7-e8aa-49db-9fc0-5b6740bf61e9")
 		(property "Reference" "LED33"
@@ -13905,6 +13941,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 93.98 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8ab5afde-4657-4d1a-8b5e-6577d63ef927")
 		)
@@ -13927,7 +13972,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2753da76-32e2-41c2-a04a-dcaed17bc3c7")
 		(property "Reference" "LED59"
@@ -14035,6 +14080,15 @@
 			)
 		)
 		(property "Description" "8-Channel Constant-Current LED Sink Driver"
+			(at 685.8 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2678539"
 			(at 685.8 177.8 0)
 			(effects
 				(font
@@ -14155,6 +14209,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 50.8 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6d99faf1-0b41-4aef-aab2-00c49cc1084e")
 		)
@@ -14219,7 +14282,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3158fbb3-fc82-47d7-809d-a4dbe737f207")
 		(property "Reference" "LED76"
@@ -14287,7 +14350,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "340eb426-b585-4715-acdb-ed527be07fc1")
 		(property "Reference" "LED13"
@@ -14355,7 +14418,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3662cd10-1f40-4d2e-8baf-b38aa95e3cc5")
 		(property "Reference" "LED84"
@@ -14423,7 +14486,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "36aba9e2-46f3-433d-992a-2c0bcdd58a1f")
 		(property "Reference" "LED25"
@@ -14491,7 +14554,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3a6392db-0f9b-4be8-a258-04354a94cf2e")
 		(property "Reference" "LED44"
@@ -14559,7 +14622,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3db2ccd2-b046-4c4c-878c-f50480564100")
 		(property "Reference" "LED17"
@@ -14637,7 +14700,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 654.685 180.34 0)
 			(effects
 				(font
@@ -14671,6 +14734,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 654.05 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bff4f64c-fd63-49ba-84db-74735cc2d883")
 		)
@@ -14693,7 +14765,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "435ba74c-2d33-4ff6-8625-272f2fd89c00")
 		(property "Reference" "LED35"
@@ -14761,7 +14833,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "44e2f80a-80ee-43ca-9a6d-d7756adec928")
 		(property "Reference" "LED61"
@@ -14829,7 +14901,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4618f259-16ea-4be7-b69d-a406ad831577")
 		(property "Reference" "LED12"
@@ -14897,7 +14969,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4708411d-4348-4c66-9489-140885d60196")
 		(property "Reference" "LED51"
@@ -14965,7 +15037,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "48164fde-522b-4c46-beb1-035386e58e93")
 		(property "Reference" "LED15"
@@ -15081,6 +15153,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 558.8 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "71763df7-6888-4b70-9d92-ac14b1c8efe2")
 		)
@@ -15155,7 +15236,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 210.185 180.34 0)
 			(effects
 				(font
@@ -15189,6 +15270,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 209.55 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a6531597-6714-43bb-b36d-81a1bc12bc86")
 		)
@@ -15211,7 +15301,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4db66d66-7c6b-4ad1-a3e1-9d4f31bcef17")
 		(property "Reference" "LED43"
@@ -15279,7 +15369,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "514bf5dc-90ed-4b8e-8ff9-256905caf692")
 		(property "Reference" "LED57"
@@ -15391,6 +15481,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 411.48 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "25a37eee-5497-4a44-944d-71711fea54d3")
 		)
@@ -15453,6 +15552,15 @@
 			)
 		)
 		(property "Description" "8-Channel Constant-Current LED Sink Driver"
+			(at 431.8 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2678539"
 			(at 431.8 177.8 0)
 			(effects
 				(font
@@ -15525,7 +15633,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "60d679cb-55d3-4ad9-a04e-d311d1226a91")
 		(property "Reference" "LED56"
@@ -15593,7 +15701,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "61b6ae0c-6b9f-4333-9b6d-ab63f6964f35")
 		(property "Reference" "LED40"
@@ -15709,6 +15817,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 622.3 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9790c4d1-1a60-486f-be02-8d2f54d62850")
 		)
@@ -15773,7 +15890,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6550a917-43c0-4674-9f91-e7fabcd6811d")
 		(property "Reference" "LED69"
@@ -15841,7 +15958,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6552f7d0-4802-4da4-9532-dde57888b173")
 		(property "Reference" "LED37"
@@ -15909,7 +16026,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "67728c30-39a5-49d4-bf21-782aad9a65ea")
 		(property "Reference" "LED65"
@@ -15977,7 +16094,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6875892c-1920-43b6-bf1e-bfde93efa49d")
 		(property "Reference" "LED38"
@@ -16089,6 +16206,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 157.48 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "099e8b9a-060a-442c-bcb5-ce0bd489a337")
 		)
@@ -16111,7 +16237,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "68f47a8a-29de-4c00-8d9d-87afbd84a0ae")
 		(property "Reference" "LED79"
@@ -16179,7 +16305,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6911f39a-82ce-4ac5-b537-07bf0d157f1e")
 		(property "Reference" "LED52"
@@ -16247,7 +16373,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6bdd3349-227a-4927-bb81-4739ad2ea849")
 		(property "Reference" "LED39"
@@ -16315,7 +16441,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6c54d52a-37b9-46bc-8ed7-0cb6f434e28a")
 		(property "Reference" "LED74"
@@ -16427,6 +16553,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 220.98 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "194ac77b-1f2f-4147-b0b5-1ffb659d2440")
 		)
@@ -16449,7 +16584,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6fa04349-3618-4042-86fc-9f899f307586")
 		(property "Reference" "LED55"
@@ -16517,7 +16652,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "715ffe82-78d0-4b39-ab17-ec29781ccb9e")
 		(property "Reference" "LED8"
@@ -16585,7 +16720,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7a43841b-079d-4217-af3c-77bb7bc04902")
 		(property "Reference" "LED2"
@@ -16653,7 +16788,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7ac4dfc3-ae96-4910-a3fd-6cd4f55635a4")
 		(property "Reference" "LED22"
@@ -16769,6 +16904,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 304.8 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ee5449cb-f63f-438f-a556-1e27e0025973")
 		)
@@ -16833,7 +16977,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7c9ba181-170d-4201-ab1d-d9d0f2411093")
 		(property "Reference" "LED81"
@@ -16901,7 +17045,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "815e653a-5228-4e62-bef5-9b2d28cd1208")
 		(property "Reference" "LED54"
@@ -17013,6 +17157,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 538.48 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "695957da-0332-45d0-84ad-8b5e59339cd9")
 		)
@@ -17079,6 +17232,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 474.98 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "432d902a-d4f0-4d52-bb49-996b0d64e583")
 		)
@@ -17101,7 +17263,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "8472ff55-6c5f-42ba-9546-97b5ad405fdb")
 		(property "Reference" "LED64"
@@ -17169,7 +17331,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "86d8ab43-a4d6-4451-b359-d54e5a5f86fa")
 		(property "Reference" "LED31"
@@ -17237,7 +17399,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "878f5fcb-2f81-47a1-ada2-a1a383ec24f4")
 		(property "Reference" "LED75"
@@ -17305,7 +17467,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "8adeac28-9580-4282-ab11-974b9c20642a")
 		(property "Reference" "LED68"
@@ -17421,6 +17583,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 241.3 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b52ad6f5-7399-4e38-b476-073d4a4edf0a")
 		)
@@ -17495,7 +17666,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 83.185 180.34 0)
 			(effects
 				(font
@@ -17527,6 +17698,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 82.55 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -17599,6 +17779,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 177.8 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8190d153-f5f4-464f-a0a8-5344d1f869ab")
 		)
@@ -17663,7 +17852,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "92ca860c-7991-4c8e-b248-e95359e4c5e5")
 		(property "Reference" "LED47"
@@ -17731,7 +17920,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9343e85b-8118-4bf2-b66c-e1bc517029a3")
 		(property "Reference" "LED62"
@@ -17847,6 +18036,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 368.3 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "53ad7dce-8a7a-475f-a83f-f46d5d456657")
 		)
@@ -17911,7 +18109,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9a04de69-6c86-4a80-86e5-56b97ef2633a")
 		(property "Reference" "LED78"
@@ -17979,7 +18177,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9bfdd1bc-6d2b-4297-990e-c5b3b5d81e69")
 		(property "Reference" "LED63"
@@ -18047,7 +18245,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9e766030-80c6-40b5-bc83-fdf279c8193b")
 		(property "Reference" "LED30"
@@ -18115,7 +18313,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a28b6da1-5812-4533-8dc6-bf6d290de125")
 		(property "Reference" "LED82"
@@ -18183,7 +18381,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a4ed54ea-994e-4e47-b3e3-ba79928d154e")
 		(property "Reference" "LED21"
@@ -18261,7 +18459,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 273.685 180.34 0)
 			(effects
 				(font
@@ -18295,6 +18493,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 273.05 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a262f3c5-440c-4c9a-b304-29f383354cfe")
 		)
@@ -18317,7 +18524,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a7262d14-1c6d-4ecf-9d0a-8d66b94b0235")
 		(property "Reference" "LED26"
@@ -18385,7 +18592,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a8d7c08b-8fa6-4954-8347-d846d7ec9e41")
 		(property "Reference" "LED72"
@@ -18453,7 +18660,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "abdbb8b9-c705-41d0-bf01-f7b508e6a92f")
 		(property "Reference" "LED16"
@@ -18521,7 +18728,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "acee6d7b-d961-412d-91f0-a21e945e9bca")
 		(property "Reference" "LED32"
@@ -18633,6 +18840,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 347.98 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7d78358a-918a-47ef-89ac-e3c5805fe992")
 		)
@@ -18655,7 +18871,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "adc0e1f0-9cdc-4dff-b186-e4b8ed0763db")
 		(property "Reference" "LED85"
@@ -18767,6 +18983,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 284.48 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "25092a07-49f3-4b32-88ea-b46ba0ae226b")
 		)
@@ -18789,7 +19014,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b0b79281-51a2-41ca-ba91-db848ff7924d")
 		(property "Reference" "LED83"
@@ -18857,7 +19082,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b38f0f4f-2edf-49c4-9699-222e661247ca")
 		(property "Reference" "LED11"
@@ -18925,7 +19150,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b3f7c000-03d5-41cb-8182-08264c5bfdd8")
 		(property "Reference" "LED86"
@@ -19003,7 +19228,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 591.185 180.34 0)
 			(effects
 				(font
@@ -19037,6 +19262,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 590.55 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "416f755f-3789-4f16-8c67-167d43f3b1d6")
 		)
@@ -19059,7 +19293,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "bd326f96-3bce-4816-b7cd-021d65cdb460")
 		(property "Reference" "LED66"
@@ -19127,7 +19361,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "be20ff1e-de09-425a-acd9-cb1e23cef5f5")
 		(property "Reference" "LED70"
@@ -19195,7 +19429,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "bf3fca53-10c4-489c-828c-37069d0e06e7")
 		(property "Reference" "LED73"
@@ -19263,7 +19497,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c6ef9bc2-b50c-4b9f-b81d-3471d6fd3b8d")
 		(property "Reference" "LED67"
@@ -19375,6 +19609,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 601.98 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "346e3a0a-c665-4bee-9e0c-9ba52a096394")
 		)
@@ -19397,7 +19640,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c96fce5d-860a-45d7-88d7-fb24e8dd02f7")
 		(property "Reference" "LED20"
@@ -19509,6 +19752,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25905"
+			(at 30.48 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b1db33ce-de06-40c6-a12e-33d3fcd97711")
 		)
@@ -19541,7 +19793,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 400.685 180.34 0)
 			(effects
 				(font
@@ -19575,6 +19827,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 400.05 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e693c628-9f12-442e-bb9d-3c33e47ae693")
 		)
@@ -19597,7 +19858,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ce70c50a-b9cd-4bf2-94bc-87ead9f6215b")
 		(property "Reference" "LED80"
@@ -19665,7 +19926,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d0e4fec7-e98b-44b7-bd1c-6d865e005e6b")
 		(property "Reference" "LED34"
@@ -19733,7 +19994,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d115c1d4-9a7d-48d2-a7eb-45f95c2a6187")
 		(property "Reference" "LED36"
@@ -19811,7 +20072,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 146.685 180.34 0)
 			(effects
 				(font
@@ -19845,6 +20106,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 146.05 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "93769f51-75a4-4851-93a6-df2d6e4a8e9d")
 		)
@@ -19867,7 +20137,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d1efb82b-4ac4-4bc4-9a17-303f462bac16")
 		(property "Reference" "LED50"
@@ -19935,7 +20205,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d25a1b10-5997-4417-b99f-c7a86af142e7")
 		(property "Reference" "LED18"
@@ -20003,7 +20273,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d4973bf0-dffa-45b4-a100-019c33eed86b")
 		(property "Reference" "LED9"
@@ -20071,7 +20341,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d5a7255b-df3e-44a2-a66c-efdf56a11399")
 		(property "Reference" "LED53"
@@ -20187,6 +20457,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2678539"
+			(at 495.3 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9f57ef01-e370-48ff-abea-90314bdb6fa2")
 		)
@@ -20261,7 +20540,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 19.685 180.34 0)
 			(effects
 				(font
@@ -20295,6 +20574,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 19.05 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5d91710f-636a-4b7d-9a14-605d9411999b")
 		)
@@ -20317,7 +20605,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e9870f74-9377-4cfb-bd6e-fbfce3df834e")
 		(property "Reference" "LED77"
@@ -20385,7 +20673,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "eb4f39cc-9b09-4e71-8222-a0583a1198c4")
 		(property "Reference" "LED6"
@@ -20453,7 +20741,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "eb796b80-a1e7-4cbb-a1df-dad6901dacf6")
 		(property "Reference" "LED29"
@@ -20521,7 +20809,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "edde9f82-274c-43d3-bcde-d6d49fe844b6")
 		(property "Reference" "LED1"
@@ -20589,7 +20877,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ee9c80be-c9fc-490a-9b4e-a48e2a830150")
 		(property "Reference" "LED87"
@@ -20657,7 +20945,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "efdc5ee8-4328-47b4-8fb1-6c068023478f")
 		(property "Reference" "LED24"
@@ -20725,7 +21013,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f0d18ea9-7179-430a-b743-f61b0201e702")
 		(property "Reference" "LED7"
@@ -20793,7 +21081,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f21f498a-c94b-4ad9-9b7c-4f15728e393f")
 		(property "Reference" "LED49"
@@ -20871,7 +21159,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 527.685 180.34 0)
 			(effects
 				(font
@@ -20905,6 +21193,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 527.05 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "597c2f86-d60c-40f4-9249-6b1f8d2eef6b")
 		)
@@ -20927,7 +21224,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fb6dd48f-c543-4953-bc13-54340df780ee")
 		(property "Reference" "LED28"
@@ -20995,7 +21292,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fc4643b7-345d-4c6b-8226-6f61e40bcedd")
 		(property "Reference" "LED10"
@@ -21063,7 +21360,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fd14dc07-37ee-4814-843d-a345db8fdb0b")
 		(property "Reference" "LED3"
@@ -21131,7 +21428,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ff070e0d-b4e2-4936-b477-d9d57300c7ae")
 		(property "Reference" "LED45"
@@ -21199,7 +21496,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ffdcd54e-fae5-4892-86b3-59be27a51f42")
 		(property "Reference" "LED46"

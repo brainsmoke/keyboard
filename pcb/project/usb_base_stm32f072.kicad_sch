@@ -5522,6 +5522,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C51118"
+			(at 128.27 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aa0d294b-3faa-4139-90fa-080e54b6557e")
 		)
@@ -5570,7 +5579,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 143.891 49.403 0)
 			(effects
 				(font
@@ -5603,6 +5612,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 140.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5679,6 +5697,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C52923"
+			(at 110.49 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3675df8d-8a25-4f82-aefb-e89319c17d45")
 		)
@@ -5749,6 +5776,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C165948"
+			(at 27.94 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "S1"
@@ -5868,6 +5904,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C7519"
+			(at 73.66 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "207e27dd-57e5-4545-a820-060906b7c245")
 		)
@@ -5926,7 +5971,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 52.07 24.892 90)
 			(effects
 				(font
@@ -5950,6 +5995,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C25905"
+			(at 52.07 26.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5998,7 +6052,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 52.07 27.432 90)
 			(effects
 				(font
@@ -6022,6 +6076,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C25905"
+			(at 52.07 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6582,7 +6645,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" "C52923"
 			(at 119.38 82.55 0)
 			(effects
 				(font
@@ -6665,7 +6728,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" "C52923"
 			(at 128.27 82.55 0)
 			(effects
 				(font
@@ -6748,7 +6811,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" "C52923"
 			(at 137.16 82.55 0)
 			(effects
 				(font
@@ -6831,7 +6894,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" "C52923"
 			(at 146.05 82.55 0)
 			(effects
 				(font
@@ -7046,6 +7109,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25741"
+			(at 34.29 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1796d3c1-6683-4cef-8924-10a63756a123")
 		)
@@ -7187,6 +7259,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C81720"
+			(at 104.14 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "7"
@@ -7401,6 +7482,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C318893"
+			(at 39.37 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "dfd57d34-ca6b-4505-a65a-0ad3ad1fcc64")
 		)
@@ -7473,6 +7563,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25741"
+			(at 76.2 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5fb7e414-25c6-4d7a-bc7c-21ae30ef9b92")
 		)
@@ -7501,7 +7600,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00006555db63")
 		(property "Reference" "J2"
 			(at 38.8112 82.0928 0)

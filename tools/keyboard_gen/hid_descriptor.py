@@ -1,22 +1,40 @@
 
 TYPE_MAIN, TYPE_GLOBAL, TYPE_LOCAL = range(3)
 TYPE_BITSHIFT = 2
+TYPE_MASK = 3<<TYPE_BITSHIFT
 def _btype(scope):
     assert scope in (TYPE_MAIN, TYPE_GLOBAL, TYPE_LOCAL)
     return scope<<TYPE_BITSHIFT
 
+def _get_type(b):
+    scope = (b & TYPE_MASK)>>TYPE_BITSHIFT
+    assert scope in (TYPE_MAIN, TYPE_GLOBAL, TYPE_LOCAL)
+    return scope
+
 SIZE_0, SIZE_1, SIZE_2, SIZE_4 = range(4)
 SIZE_BITSHIFT = 0
+SIZE_MASK = 3
 def _bsize(n):
     return { 0: SIZE_0, 1: SIZE_1, 2: SIZE_2, 4:SIZE_4 }[n]<<SIZE_BITSHIFT
+
+def _get_size(b):
+    return { SIZE_0 :0, SIZE_1 :1, SIZE_2: 2, SIZE_4: 4}[(b & SIZE_MASK)>>SIZE_BITSHIFT]
 
 SHORT_TAG_MAX = 15
 TAG_MAX = 255
 SHORT_TAG_LONGITEM = 15
 SHORT_TAG_BITSHIFT = 4
+SHORT_TAG_MASK = 0xf0
 def _btag(tag):
     assert 0 <= tag <= SHORT_TAG_MAX
     return tag<<SHORT_TAG_BITSHIFT
+
+def _get_tag(b):
+    return (b&SHORT_TAG_MASK)>>SHORT_TAG_BITSHIFT
+
+def _parse_byte_0(b):
+    """ (size, scope, tag) """
+    return ( _get_size(b), _get_type(b), _get_tag(b) )
 
 DATA_MAX = 256
 
@@ -94,13 +112,28 @@ input_bits = lc({
     "Buffered Bytes" : ( 8, 1 ),
 })
 
+input_bits_inv = (
+    (0, ( "Data", "Constant" )),
+    (1, ( "Array", "Variable" )),
+    (2, ( "Absolute", "Relative" )),
+    (3, ( "", "Wrap" )),
+    (4, ( "", "Non Linear" )),
+    (5, ( "", "No Preferred State" )),
+    (6, ( "", "Null State" )),
+    (8, ( "", "Buffered Bytes" )),
+)
+
 output_bits = input_bits.copy() | lc({
 
     "Non Volatile" : ( 7, 0 ),
     "Volatile" :     ( 7, 1 ),
 })
 
+output_bits_inv = input_bits_inv + (( 7,("","Volatile") ),)
+
 feature_bits = output_bits.copy()
+
+feature_bits_inv = output_bits_inv
 
 def parse_bitfield(s, field_def):
     bitnames = [ x.strip().lower() for x in strip_parens(s).split(',') ]
@@ -132,6 +165,7 @@ collection = lc({
     "Usage Switch"   : 0x05,
     "Usage Modifier" : 0x06,
 })
+collection_inv = { v:k for k, v in collection.items() }
 
 def parse_collection(s, ctx):
     v = strip_parens(s).strip().lower()
@@ -180,9 +214,14 @@ def state_pop(s, ctx):
 usage_page = {}
 usages = {}
 
+usage_page_inv = {}
+usages_inv = {}
+
 def new_usage_page(s, n, d):
     usage_page[s.lower()]=n
+    usage_page_inv[n]=s
     usages[n] = lc(d)
+    usages_inv[n] = { v:k for k,v in d.items() }
 
 new_usage_page("Generic Desktop", 0x01, {
     "Pointer"  : 0x01,
@@ -257,27 +296,84 @@ def parse_usage(s, ctx):
         n = parse_signed('('+l[-1]+')', ctx)
     return n + hi*0x10000
 
+def interp_bits(n, bits_info):
+    return '('+', '.join( vals[int( (1<<bit) & n != 0 )] for bit, vals in bits_info if vals[int( (1<<bit) & n != 0 )] )+')'
+
+def interp_input_bits(n, size, ctx):
+    return interp_bits(n, input_bits_inv)
+
+def interp_output_bits(n, size, ctx):
+    return interp_bits(n, output_bits_inv)
+
+def interp_feature_bits(n, size, ctx):
+    return interp_bits(n, feature_bits_inv)
+
+def interp_collection(n, size, ctx):
+    if n in usage_page_inv:
+        s = f'({collection_inv[n]})'
+    else:
+        s = f'({n})'
+    return s
+
+def interp_usage_page(n, size, ctx):
+    ctx['page'] = n
+    if n in usage_page_inv:
+        s = f'({usage_page_inv[n]})'
+    else:
+        s = f'({n})'
+    return s
+
+def interp_signed(n, size, ctx):
+    if n & (1<<(size*8-1)):
+        n -= 1<<(size*8)
+    return f'({n})'
+
+def interp_unsigned(n, size, ctx):
+    return f'({n})'
+
+def interp_exponent(n, size, ctx):
+    assert False
+
+def interp_unit(n, size, ctx):
+    assert False
+
+def interp_usage(n, size, ctx):
+    if size <= 2:
+        page, n = ctx['page'], n
+        page_part = ''
+        return '(' + usages_inv[ctx['page']].get(n, f'{n}') + ')'
+    else:
+        page, n = n>>16, n&0xffff
+        page_part = f'{usage_page.get(page, str(n))}, '
+
+    usage_part = usages_inv.get(page,{}).get(n, f'{n}')
+    return f'({page_part}{usage_part})'
+
+def assert_0(n, size, ctx):
+    assert n == 0
+    return ''
+
 items = lc({
-    "Input"            : ( TYPE_MAIN,   0b1000, parse_input_bits ),
-    "Output"           : ( TYPE_MAIN,   0b1001, parse_output_bits ),
-    "Feature"          : ( TYPE_MAIN,   0b1011, parse_feature_bits ),
-    "Collection"       : ( TYPE_MAIN,   0b1010, parse_collection ),
-    "End Collection"   : ( TYPE_MAIN,   0b1100, parse_none ),
-    "Usage Page"       : ( TYPE_GLOBAL, 0b0000, parse_usage_page ),
-    "Logical Minimum"  : ( TYPE_GLOBAL, 0b0001, parse_signed ),
-    "Logical Maximum"  : ( TYPE_GLOBAL, 0b0010, parse_signed ),
-    "Physical Minimum" : ( TYPE_GLOBAL, 0b0011, parse_signed ),
-    "Physical Maximum" : ( TYPE_GLOBAL, 0b0100, parse_signed ),
-    "Unit Exponent"    : ( TYPE_GLOBAL, 0b0101, parse_exponent ),
-    "Unit"             : ( TYPE_GLOBAL, 0b0110, parse_unit ),
-    "Report Size"      : ( TYPE_GLOBAL, 0b0111, parse_unsigned ),
-    "Report ID"        : ( TYPE_GLOBAL, 0b1000, parse_unsigned ),
-    "Report Count"     : ( TYPE_GLOBAL, 0b1001, parse_unsigned ),
-    "Push"             : ( TYPE_GLOBAL, 0b1010, state_push ),
-    "Pop"              : ( TYPE_GLOBAL, 0b1011, state_pop ),
-    "Usage"            : ( TYPE_LOCAL,  0b0000, parse_usage ),
-    "Usage Minimum"    : ( TYPE_LOCAL,  0b0001, parse_usage ),
-    "Usage Maximum"    : ( TYPE_LOCAL,  0b0010, parse_usage ),
+    "Input"            : ( TYPE_MAIN,   0b1000, parse_input_bits, interp_input_bits ),
+    "Output"           : ( TYPE_MAIN,   0b1001, parse_output_bits, interp_output_bits ),
+    "Feature"          : ( TYPE_MAIN,   0b1011, parse_feature_bits, interp_feature_bits ),
+    "Collection"       : ( TYPE_MAIN,   0b1010, parse_collection, interp_collection ),
+    "End Collection"   : ( TYPE_MAIN,   0b1100, parse_none, assert_0 ),
+    "Usage Page"       : ( TYPE_GLOBAL, 0b0000, parse_usage_page, interp_usage_page ),
+    "Logical Minimum"  : ( TYPE_GLOBAL, 0b0001, parse_signed, interp_signed ),
+    "Logical Maximum"  : ( TYPE_GLOBAL, 0b0010, parse_signed, interp_signed ),
+    "Physical Minimum" : ( TYPE_GLOBAL, 0b0011, parse_signed, interp_signed ),
+    "Physical Maximum" : ( TYPE_GLOBAL, 0b0100, parse_signed, interp_signed ),
+    "Unit Exponent"    : ( TYPE_GLOBAL, 0b0101, parse_exponent, interp_exponent ),
+    "Unit"             : ( TYPE_GLOBAL, 0b0110, parse_unit, interp_unit ),
+    "Report Size"      : ( TYPE_GLOBAL, 0b0111, parse_unsigned, interp_unsigned ),
+    "Report ID"        : ( TYPE_GLOBAL, 0b1000, parse_unsigned, interp_unsigned ),
+    "Report Count"     : ( TYPE_GLOBAL, 0b1001, parse_unsigned, interp_unsigned ),
+    "Push"             : ( TYPE_GLOBAL, 0b1010, state_push, assert_0 ),
+    "Pop"              : ( TYPE_GLOBAL, 0b1011, state_pop,  assert_0 ),
+    "Usage"            : ( TYPE_LOCAL,  0b0000, parse_usage, interp_usage ),
+    "Usage Minimum"    : ( TYPE_LOCAL,  0b0001, parse_usage, interp_usage ),
+    "Usage Maximum"    : ( TYPE_LOCAL,  0b0010, parse_usage, interp_usage ),
 #   ...
 
 })
@@ -306,10 +402,45 @@ def parse_hid_descriptor(s):
         data.append( '\t'+l+'/* '+line.strip()+' */\n')
 
     return ''.join(data)
-    
+
+def interp_item(tag, scope, size, data, ctx):
+    for name, t in items.items():
+        scope_i, tag_i, _, interp_data = t
+        if tag_i == tag and scope_i == scope:
+             return f'{name} {interp_data(data, size, ctx)}'
+    return f'? {tag} {scope} {size} {data}'
+
+def decompile(data):
+    ctx = {}
+    for tag, scope, size, data, b in get_hid_descriptor_items(desc):
+        yield interp_item(tag, scope, size, data, ctx)
+
+
+def get_hid_descriptor_items(descriptor):
+   i=0
+   while i < len(descriptor):
+       start = i
+       size, scope, tag = _parse_byte_0(descriptor[i])
+       i += 1
+       if tag == SHORT_TAG_LONGITEM:
+           assert size == 2
+           size = descriptor[i]
+           tag = descriptor[i+1]
+           i += 2
+       data = sum( descriptor[i+j]<<(j*8) for j in range(size) )
+       i += size
+       yield ( tag, scope, size, data, descriptor[start:i].hex() )
 
 if __name__ == '__main__':
     import sys
-    print(parse_hid_descriptor(sys.stdin.read()), end='')
 
+    cmd = ( sys.argv[1:] + [None] ) [0]
+
+    data = sys.stdin.read()
+    if cmd == 'decompile':
+        desc = bytes.fromhex(data)
+        for s in decompile(desc):
+            print (s)
+    else:
+        print(parse_hid_descriptor(data), end='')
 

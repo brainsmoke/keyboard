@@ -72,25 +72,24 @@ def process(row, boardhouse='jlc'):
 
     rot = decimal.Decimal(row['Rot'])
     layer = row['Side']
-    if layer == 'bottom':
-        rot = bottom_rotation[boardhouse](rot)
 
     if change:
-        assert layer in ('top', 'bottom')
+        orient = { 'top': 1, 'bottom': -1 }[layer]
 
-        rot += decimal.Decimal(change['rot'])
-
+        rot += decimal.Decimal(change['rot']) * orient
 
         t = radians(float(rot))
         x, y = float(row['PosX']), float(row['PosY'])
         dx, dy = [ float(x) for x in change['pos'] ]
 
-        if layer == 'bottom': # untested
-            dx = -dx
+        dy = dy * orient
 
         new_x, new_y = x+cos(t)*dx - sin(t)*dy, y + sin(t)*dx + cos(t)*dy
         row['PosX'] = f"{new_x:.6f}"
         row['PosY'] = f"{new_y:.6f}"
+
+    if layer == 'bottom':
+        rot = bottom_rotation[boardhouse](rot)
 
     rot %= 360
     row['Rot'] = f"{rot:.6f}"

@@ -9,7 +9,7 @@ holes = [ [31, dim.y-12], [dim.x-64, dim.y-12], [ 5, 50 ], [dim.x-5, 50 ] ] ;
 r = 5;
 
 bottom = 1.2;
-screw_hole_d = 2.8;
+screw_hole_d = 2.9;
 
 angle = 5;
 

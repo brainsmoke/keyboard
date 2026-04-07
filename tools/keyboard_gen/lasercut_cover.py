@@ -35,10 +35,17 @@ hull_path = LED_path[0:2] + diode_path[1:3] + [ side_holes_path[2], pad_b_path[2
 
 hole_d = 3.2
 holes = [ vec_sum( edges_origin, pos ) for pos in (
-    (31,12),
-    (357-64,12),
-    (5,125-50),
-    (357-5,125-50),
+
+    (31,     12),
+    (121.5,  12),
+    (357-64, 12),
+
+    (5,      125-50),
+    (357-5,  125-50),
+
+    (100,    125-12),
+    (165,    125-12),
+    (357-64, 125-12),
 ) ]
 
 def stabilizer_rod(w):

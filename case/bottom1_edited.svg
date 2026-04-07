@@ -20,9 +20,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.7656353"
-     inkscape:cx="189.73341"
-     inkscape:cy="268.17543"
+     inkscape:zoom="0.87061064"
+     inkscape:cx="463.4678"
+     inkscape:cy="457.72471"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -39,204 +39,255 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 232.65247,50.519914 h 1.96008 l 1.95899,0.93431 h 4.50987 v 5.549532 h -8.20002 l -0.015,-4.283977 h -2.51665 V 51.71984 Z"
-       id="path35"
-       sodipodi:nodetypes="cccccccccc" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 259.20227,43.730147 h 1.96008 l 6.46266,1.119829 v 5.550048 h -8.20002 l -1.14515,-3.700032 V 44.67996 Z"
-       id="path34" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 310.95983,43.719812 h 3.01997 l 6.09575,1.130164 v 5.550048 h -8.20001 l -0.91571,-4.66018 z"
-       id="path33" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 354.09001,43.670203 h 1.96009 l 6.82439,1.179773 v 5.550048 h -8.20001 l -1.07436,-3.520198 v -2.020032 z"
-       id="path32" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 202.09206,43.620076 h 1.96008 l 6.42235,1.2299 v 5.550048 h -8.20001 l -2.48512,-4.600236 v -0.999939 z"
-       id="path31" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 173.51757,43.620076 h 1.96009 l 6.42235,1.2299 v 5.550048 h -8.20002 l -2.4846,-4.600236 v -0.999939 z"
-       id="path30" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 144.94257,43.620076 h 1.96009 l 6.42235,1.2299 v 5.550048 h -8.20002 l -2.48512,-4.600236 v -0.999939 z"
-       id="path29" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 116.36706,43.620076 h 1.96008 l 6.42235,1.2299 v 5.550048 h -8.20001 l -2.48512,-4.600236 v -0.999939 z"
-       id="path28" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 87.792574,43.620076 h 1.960087 l 6.422347,1.2299 v 5.550048 h -8.200016 l -2.48512,-4.600236 v -0.999939 z"
-       id="path27" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 59.217574,43.620076 h 1.960087 l 6.422347,1.2299 v 5.550048 h -8.200016 l -2.48512,-4.600236 v -0.999939 z"
-       id="path26" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 30.642574,43.620076 h 1.960087 l 6.422347,1.2299 v 5.550048 h -8.200016 l -2.48512,-4.600236 v -0.999939 z"
-       id="path25" />
+    <g
+       id="g1"
+       style="stroke:#ff0000;stroke-opacity:1">
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 232.65247,50.519914 h 1.96008 l 1.95899,0.93431 h 4.50987 v 5.549532 h -8.20002 l -0.015,-4.283977 h -2.51665 V 51.71984 Z"
+         id="path35"
+         sodipodi:nodetypes="cccccccccc" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 259.20227,43.730147 h 1.96008 l 6.46266,1.119829 v 5.550048 h -8.20002 l -1.14515,-3.700032 V 44.67996 Z"
+         id="path34" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 310.95983,43.719812 h 3.01997 l 6.09575,1.130164 v 5.550048 h -8.20001 l -0.91571,-4.66018 z"
+         id="path33" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 354.09001,43.670203 h 1.96009 l 6.82439,1.179773 v 5.550048 h -8.20001 l -1.07436,-3.520198 v -2.020032 z"
+         id="path32" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 202.09206,43.620076 h 1.96008 l 6.42235,1.2299 v 5.550048 h -8.20001 l -2.48512,-4.600236 v -0.999939 z"
+         id="path31" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 173.51757,43.620076 h 1.96009 l 6.42235,1.2299 v 5.550048 h -8.20002 l -2.4846,-4.600236 v -0.999939 z"
+         id="path30" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 144.94257,43.620076 h 1.96009 l 6.42235,1.2299 v 5.550048 h -8.20002 l -2.48512,-4.600236 v -0.999939 z"
+         id="path29" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 116.36706,43.620076 h 1.96008 l 6.42235,1.2299 v 5.550048 h -8.20001 l -2.48512,-4.600236 v -0.999939 z"
+         id="path28" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 87.792574,43.620076 h 1.960087 l 6.422347,1.2299 v 5.550048 h -8.200016 l -2.48512,-4.600236 v -0.999939 z"
+         id="path27" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 59.217574,43.620076 h 1.960087 l 6.422347,1.2299 v 5.550048 h -8.200016 l -2.48512,-4.600236 v -0.999939 z"
+         id="path26" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 30.642574,43.620076 h 1.960087 l 6.422347,1.2299 v 5.550048 h -8.200016 l -2.48512,-4.600236 v -0.999939 z"
+         id="path25" />
+    </g>
     <path
        id="path1"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 28.113013,23.224939 c -2.761424,0 -5.000212,2.238788 -5.000212,5.000212 V 143.22485 c 0,2.76142 2.238788,5.00021 5.000212,5.00021 H 375.11302 c 2.76142,0 5.00021,-2.23879 5.00021,-5.00021 V 28.225151 c 0,-2.761424 -2.23879,-5.000212 -5.00021,-5.000212 H 235.18306 v 6.295223 l 0.31729,-0.250631 1.32034,-1.349788 h 2.23965 l 1.04025,1.349788 v 2.900082 l -2.48047,0.280603 v 0.999939 l -3.49488,2.050004 v 0.999939 l 1.4578,2.10013 v 0.999939 l 2.96209,1.530139 0.68678,1.568896 c 1.59092,0.115576 2.91649,1.396421 3.12074,3.000851 0.2942,2.31043 -1.55676,4.330937 -3.80752,4.569747 v -1.523421 c -1.31533,0.209341 -2.52682,-0.455941 -3.22306,-1.49655 h -1.88981 -0.99994 l -1.70739,2.020032 h -2.28978 l -0.50281,-2.020032 h -0.99994 l -2.15025,-2.149739 v -6.499862 l -0.51212,-0.750342 v -0.999939 l 2.66237,-0.399975 -0.28732,-2.515092 v -2.649968 l -1.60197,-0.2651 v -7.794873 z"
        sodipodi:nodetypes="ssssssssccccccccccccccccccccccccccccccccccs" />
-    <circle
-       cx="280.19376"
-       cy="67.324997"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle5" />
-    <circle
-       cx="304.00626"
-       cy="67.324997"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle6" />
-    <circle
-       cx="277.8125"
-       cy="105.425"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle7" />
-    <circle
-       cx="301.625"
-       cy="105.425"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle8" />
-    <circle
-       cx="34.924999"
-       cy="124.475"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle9" />
-    <circle
-       cx="58.737499"
-       cy="124.475"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle10" />
-    <circle
-       cx="273.04999"
-       cy="124.475"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle11" />
-    <circle
-       cx="296.86249"
-       cy="124.475"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle12" />
-    <circle
-       cx="106.36875"
-       cy="143.52499"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle13" />
-    <circle
-       cx="206.36874"
-       cy="143.52499"
-       r="2.25"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle14" />
-    <circle
-       cx="280.19376"
-       cy="50.084999"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle15" />
-    <circle
-       cx="304.00626"
-       cy="50.084999"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle16" />
-    <circle
-       cx="277.8125"
-       cy="88.184998"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle17" />
-    <circle
-       cx="301.625"
-       cy="88.184998"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle18" />
-    <circle
-       cx="34.924999"
-       cy="107.235"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle19" />
-    <circle
-       cx="58.737499"
-       cy="107.235"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle20" />
-    <circle
-       cx="273.04999"
-       cy="107.235"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle21" />
-    <circle
-       cx="296.86249"
-       cy="107.235"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle22" />
-    <circle
-       cx="106.36875"
-       cy="126.285"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle23" />
-    <circle
-       cx="206.36874"
-       cy="126.285"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle24" />
     <path
+       id="path89"
        style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 32.385,28.575 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 38.1,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 l 3.54,-0.5875 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m -333.375,25.4 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 l 3.54,-0.5875 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 38.1,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z M 37.1475,73.025 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 33.3375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z M 39.52875,92.075 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 26.19375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 30.95625,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m -242.8875,19.05 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 30.95625,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 35.71875,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 64.29375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m -311.94375,19.05 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 71.4375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 71.4375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 30.95625,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z"
+       d="m 34.76625,130.175 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 71.4375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 71.4375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 30.95625,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z" />
+    <path
+       id="path76"
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 44.29125,111.125 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 30.95625,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 35.71875,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 64.29375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z" />
+    <path
+       id="path63"
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 39.52875,92.075 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 26.19375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 30.95625,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z" />
+    <path
+       id="path46"
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 37.1475,73.025 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 23.8125,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 33.3375,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z" />
+    <path
+       id="path17"
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 32.385,53.975 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 l 3.54,-0.5875 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 38.1,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z" />
+    <path
        id="path24"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-    <circle
-       cx="54.112999"
-       cy="35.224998"
-       r="1.6"
        style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle1" />
+       d="m 32.385,28.575 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 38.1,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 l 3.54,-0.5875 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 28.575,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z m 19.05,0 h 5.08 l 4.26,3.15 v 2 l -0.72,2.2 -0.77,3.04 -6.35,2.54 h -3 l -2.04,-5.58 v -2 z" />
+    <g
+       id="g2"
+       style="stroke:#ff0000;stroke-opacity:1">
+      <circle
+         cx="280.19376"
+         cy="67.324997"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle5" />
+      <circle
+         cx="304.00626"
+         cy="67.324997"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle6" />
+      <circle
+         cx="277.8125"
+         cy="105.425"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle7" />
+      <circle
+         cx="301.625"
+         cy="105.425"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle8" />
+      <circle
+         cx="34.924999"
+         cy="124.475"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle9" />
+      <circle
+         cx="58.737499"
+         cy="124.475"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle10" />
+      <circle
+         cx="273.04999"
+         cy="124.475"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle11" />
+      <circle
+         cx="296.86249"
+         cy="124.475"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle12" />
+      <circle
+         cx="106.36875"
+         cy="143.52499"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle13" />
+      <circle
+         cx="206.36874"
+         cy="143.52499"
+         r="2.25"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle14" />
+      <circle
+         cx="280.19376"
+         cy="50.084999"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle15" />
+      <circle
+         cx="304.00626"
+         cy="50.084999"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle16" />
+      <circle
+         cx="277.8125"
+         cy="88.184998"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle17" />
+      <circle
+         cx="301.625"
+         cy="88.184998"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle18" />
+      <circle
+         cx="34.924999"
+         cy="107.235"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle19" />
+      <circle
+         cx="58.737499"
+         cy="107.235"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle20" />
+      <circle
+         cx="273.04999"
+         cy="107.235"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle21" />
+      <circle
+         cx="296.86249"
+         cy="107.235"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle22" />
+      <circle
+         cx="106.36875"
+         cy="126.285"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle23" />
+      <circle
+         cx="206.36874"
+         cy="126.285"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle24" />
+      <circle
+         cx="54.112999"
+         cy="35.224998"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle1" />
+      <circle
+         cx="316.11301"
+         cy="35.224998"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle2" />
+      <circle
+         cx="28.113001"
+         cy="98.224998"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle3" />
+      <circle
+         cx="375.11301"
+         cy="98.224998"
+         r="1.6"
+         style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="circle4" />
+    </g>
     <circle
-       cx="316.11301"
-       cy="35.224998"
-       r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle2" />
+       cx="144.61279"
+       cy="35.224937"
+       style="fill:none;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="circle26"
+       r="1.6" />
     <circle
-       cx="28.113001"
-       cy="98.224998"
+       cx="123.113"
+       cy="136.22501"
        r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle3" />
+       style="fill:none;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="circle3-6" />
     <circle
-       cx="375.11301"
-       cy="98.224998"
+       cx="188.11301"
+       cy="136.22501"
        r="1.6"
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="circle4" />
+       style="fill:none;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="circle93" />
+    <circle
+       cx="316.11322"
+       cy="136.22507"
+       r="1.6"
+       style="fill:none;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="circle25" />
   </g>
 </svg>

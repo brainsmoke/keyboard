@@ -6,7 +6,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
-   sodipodi:docname="top2_edited.svg"
+   sodipodi:docname="top2_edited_v1.1.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,8 +21,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.65158829"
-     inkscape:cx="517.19775"
-     inkscape:cy="375.23694"
+     inkscape:cx="853.29956"
+     inkscape:cy="324.59147"
      inkscape:document-units="mm"
      inkscape:current-layer="g1"
      inkscape:document-rotation="0"
@@ -77,13 +77,6 @@
            id="circle4"
            transform="scale(-1,1)" />
         <circle
-           cx="-258.61322"
-           cy="35.224937"
-           style="fill:none;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           id="circle26"
-           r="1.6"
-           transform="scale(-1,1)" />
-        <circle
            cx="-280.11301"
            cy="136.22501"
            r="1.6"
@@ -96,13 +89,6 @@
            r="1.6"
            style="fill:none;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            id="circle93"
-           transform="scale(-1,1)" />
-        <circle
-           cx="-87.112778"
-           cy="136.22507"
-           r="1.6"
-           style="fill:none;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           id="circle25"
            transform="scale(-1,1)" />
         <path
            id="path108"
